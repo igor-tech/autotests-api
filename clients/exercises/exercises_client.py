@@ -6,11 +6,38 @@ from clients.api_client import APIClient
 from clients.private_http_builder import get_private_http_client, AuthenticationUserDict
 
 
+class Exercises(TypedDict):
+    """
+    Описание структуры урока.
+    """
+    title: str
+    courseId: str
+    minScore: int
+    maxScore: int
+    orderIndex: int
+    description: str
+    estimatedTime: str
+
+
 class GetExercisesQueryDict(TypedDict):
     """
     Описание структуры запроса на получение списка заданий.
     """
     courseId: str
+
+
+class GetExercisesResponseDict(TypedDict):
+    """
+    Описание структуры ответа получения уроков.
+    """
+    exercises: list[Exercises]
+
+
+class GetExerciseResponseDict(TypedDict):
+    """
+    Описание структуры ответа получения урока.
+    """
+    exercise: Exercises
 
 
 class CreateExerciseRequestDict(TypedDict):
@@ -26,6 +53,13 @@ class CreateExerciseRequestDict(TypedDict):
     estimatedTime: str
 
 
+class CreateExerciseResponseDict(TypedDict):
+    """
+    Описание структуры ответа создания урока.
+    """
+    exercise: Exercises
+
+
 class UpdateExerciseRequestDict(TypedDict):
     """
     Описание структуры запроса на обновление задания.
@@ -37,6 +71,11 @@ class UpdateExerciseRequestDict(TypedDict):
     description: NotRequired[str]
     estimatedTime: NotRequired[str]
 
+class UpdateExerciseResponseDict(TypedDict):
+    """
+    Описание структуры ответа обновления урока.
+    """
+    exercise: Exercises
 
 class ExercisesClient(APIClient):
     """
@@ -88,6 +127,23 @@ class ExercisesClient(APIClient):
         :return: Ответ от сервера в виде объекта httpx.Response
         """
         return self.delete(f"/api/v1/exercises/{exercise_id}")
+
+    def get_exercises(self, query: GetExercisesQueryDict) -> GetExercisesResponseDict:
+        response = self.get_exercises_api(query)
+        return response.json()
+
+    def get_exercise(self, exercise_id: str) -> GetExerciseResponseDict:
+        response = self.get_exercise_api(exercise_id)
+        return response.json()
+
+    def create_exercise(self, request: CreateExerciseRequestDict) -> CreateExerciseResponseDict:
+        response = self.create_exercise_api(request)
+        return response.json()
+
+    def update_exercise(self, exercise_id: str, request: UpdateExerciseRequestDict) -> UpdateExerciseResponseDict:
+        response = self.update_exercise_api(exercise_id, request)
+        return response.json()
+
 
 
 def get_exercises_client(user: AuthenticationUserDict) -> ExercisesClient:
