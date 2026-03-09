@@ -35,11 +35,10 @@ class RefreshRequestDict(TypedDict):
     refreshToken: str  # Название ключа совпадает с API
 
 
-class Authentification(APIClient):
+class Authentication(APIClient):
     """
     Клиент для работы с /api/v1/authentication
     """
-    pass
 
     def login_api(self, request: LoginRequestDict) -> Response:
         """
@@ -48,7 +47,7 @@ class Authentification(APIClient):
         :param request: Словарь с email и password.
         :return: Ответ от сервера в виде объекта httpx.Response
         """
-        return self.post("/api/v1/authentification/login", json=request)
+        return self.post("/api/v1/authentication/login", json=request)
 
     def refresh_api(self, request: RefreshRequestDict) -> Response:
         """
@@ -60,14 +59,14 @@ class Authentification(APIClient):
         return self.post("/api/v1/authentication/refresh", json=request)
 
     def login(self, request: LoginRequestDict) -> LoginResponseDict:
-        response = self.login_api(request)
-        return response.json()
+        response = self.login_api(request)  # Отправляем запрос на аутентификацию
+        return response.json()  # Извлекаем JSON из ответа
 
 
-def get_authentification_client() -> Authentification:
+def get_authentication_client() -> Authentication:
     """
     Функция создает экземпляр Authentification у уже встроенным HTTP-клиентом.
 
     :return: Готовый к использованию Authentification
     """
-    return Authentification(client=get_public_http_client())
+    return Authentication(client=get_public_http_client())
