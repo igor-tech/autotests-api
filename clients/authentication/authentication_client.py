@@ -65,8 +65,8 @@ class Authentication(APIClient):
 
 def get_authentication_client() -> Authentication:
     """
-    Функция создает экземпляр Authentification у уже встроенным HTTP-клиентом.
+    Функция создает экземпляр Authentication у уже встроенным HTTP-клиентом.
 
-    :return: Готовый к использованию Authentification
+    :return: Готовый к использованию Authentication
     """
     return Authentication(client=get_public_http_client())
