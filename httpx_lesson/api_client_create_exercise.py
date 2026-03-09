@@ -7,7 +7,7 @@ from clients.users.users_schema import CreateUserRequestSchema
 from clients.files.files_schema import CreateFileRequestSchema
 from clients.courses.courses_schema import CreateCourseRequestSchema
 from clients.exercises.exercises_schema import CreateExerciseRequestSchema
-from httpx_lesson.tools.fakers import get_random_email
+from tools.fakers import get_random_email
 
 public_users_client = get_public_users_client()
 
