@@ -3,7 +3,7 @@ from typing import TypedDict, NotRequired
 from httpx import Response
 
 from clients.api_client import APIClient
-from clients.private_http_builder import get_private_http_client, AuthenticationUserDict
+from clients.private_http_builder import get_private_http_client, AuthenticationUserSchema
 
 
 class Exercises(TypedDict):
@@ -87,7 +87,7 @@ class ExercisesClient(APIClient):
         Метод получения списка заданий.
 
         :param query: Словарь с courseId.
-        :return: Ответ от сервера в виде объекта httpx.Response
+        :return: Ответ от сервера в виде объекта httpx_lesson.Response
         """
         return self.get("/api/v1/exercises", params=query)
 
@@ -96,7 +96,7 @@ class ExercisesClient(APIClient):
         Метод получения задания.
 
         :param exercise_id: Идентификатор задания.
-        :return: Ответ от сервера в виде объекта httpx.Response
+        :return: Ответ от сервера в виде объекта httpx_lesson.Response
         """
         return self.get(f"/api/v1/exercises/{exercise_id}")
 
@@ -105,7 +105,7 @@ class ExercisesClient(APIClient):
         Метод создания задания.
 
         :param request: Словарь с title, courseId, maxScore, minScore, orderIndex, description, estimatedTime.
-        :return: Ответ от сервера в виде объекта httpx.Response
+        :return: Ответ от сервера в виде объекта httpx_lesson.Response
         """
         return self.post("/api/v1/exercises", json=request)
 
@@ -115,7 +115,7 @@ class ExercisesClient(APIClient):
 
         :param exercise_id: Идентификатор задания.
         :param request: Словарь с title, maxScore, minScore, orderIndex, description, estimatedTime.
-        :return: Ответ от сервера в виде объекта httpx.Response
+        :return: Ответ от сервера в виде объекта httpx_lesson.Response
         """
         return self.patch(f"/api/v1/exercises/{exercise_id}", json=request)
 
@@ -124,7 +124,7 @@ class ExercisesClient(APIClient):
         Метод удаления задания.
 
         :param exercise_id: Идентификатор задания.
-        :return: Ответ от сервера в виде объекта httpx.Response
+        :return: Ответ от сервера в виде объекта httpx_lesson.Response
         """
         return self.delete(f"/api/v1/exercises/{exercise_id}")
 
@@ -146,7 +146,7 @@ class ExercisesClient(APIClient):
 
 
 
-def get_exercises_client(user: AuthenticationUserDict) -> ExercisesClient:
+def get_exercises_client(user: AuthenticationUserSchema) -> ExercisesClient:
     """
     Функция создает экземпляр ExercisesClient у уже встроенным HTTP-клиентом.
 

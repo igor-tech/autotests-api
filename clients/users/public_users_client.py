@@ -44,7 +44,7 @@ class PublicUsersClient(APIClient):
         Метод создает пользователя.
 
         :param request: Словарь с email, password, lastName, firstName, middleName.
-        :return: Ответ от сервера в виде объекта httpx.Response
+        :return: Ответ от сервера в виде объекта httpx_lesson.Response
         """
         return self.post("/api/v1/users", json=request)
 

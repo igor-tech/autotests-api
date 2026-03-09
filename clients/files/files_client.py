@@ -3,7 +3,7 @@ from typing import TypedDict
 from httpx import Response
 
 from clients.api_client import APIClient
-from clients.private_http_builder import AuthenticationUserDict, get_private_http_client
+from clients.private_http_builder import AuthenticationUserSchema, get_private_http_client
 
 class File(TypedDict):
     """
@@ -39,7 +39,7 @@ class FilesClient(APIClient):
         Метод получения файла по идентификатору.
 
         :param file_id: Идентификатор файла.
-        :return: Ответ от сервера в виде объекта httpx.Response
+        :return: Ответ от сервера в виде объекта httpx_lesson.Response
         """
         return self.get(f"/api/v1/files/{file_id}")
 
@@ -48,7 +48,7 @@ class FilesClient(APIClient):
         Метод удаления файла по идентификатору.
 
         :param file_id: Идентификатор файла.
-        :return: Ответ от сервера в виде объекта httpx.Response
+        :return: Ответ от сервера в виде объекта httpx_lesson.Response
         """
         return self.delete(f"/api/v1/files/{file_id}")
 
@@ -57,7 +57,7 @@ class FilesClient(APIClient):
         Метод создания файла.
 
         :param request: Словарь с filename, directory, upload_file.
-        :return: Ответ от сервера в виде объекта httpx.Response
+        :return: Ответ от сервера в виде объекта httpx_lesson.Response
         """
         return self.post(
             "/api/v1/files",
@@ -70,7 +70,7 @@ class FilesClient(APIClient):
         return response.json()
 
 
-def get_files_client(user: AuthenticationUserDict) -> FilesClient:
+def get_files_client(user: AuthenticationUserSchema) -> FilesClient:
     """
     Функция создает экземпляр FilesClient у уже встроенным HTTP-клиентом.
 

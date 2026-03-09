@@ -4,7 +4,7 @@ from httpx import Response
 
 from clients.api_client import APIClient
 from clients.files.files_client import File
-from clients.private_http_builder import AuthenticationUserDict, get_private_http_client
+from clients.private_http_builder import get_private_http_client, AuthenticationUserSchema
 from clients.users.private_users_client import User
 
 
@@ -21,11 +21,13 @@ class Course(TypedDict):
     estimatedTime: str
     createdByUser: User
 
+
 class GetCoursesQueryDict(TypedDict):
     """
     Описание структуры запроса на получение списка курсов.
     """
     userId: str
+
 
 class CreateCourseRequestDict(TypedDict):
     """
@@ -39,11 +41,13 @@ class CreateCourseRequestDict(TypedDict):
     previewFileId: str
     createdByUserId: str
 
+
 class CreateCourseResponseDict(TypedDict):
     """
     Описание структуры ответа создания курса.
     """
     course: Course
+
 
 class UpdateCourseRequestDict(TypedDict):
     """
@@ -66,7 +70,7 @@ class CoursesClient(APIClient):
         Метод получения списка курсов.
 
         :param query: Словарь с userId.
-        :return: Ответ от сервера в виде объекта httpx.Response
+        :return: Ответ от сервера в виде объекта httpx_lesson.Response
         """
         return self.get("/api/v1/courses", params=query)
 
@@ -75,7 +79,7 @@ class CoursesClient(APIClient):
         Метод получения курса.
 
         :param course_id: Идентификатор курса.
-        :return: Ответ от сервера в виде объекта httpx.Response
+        :return: Ответ от сервера в виде объекта httpx_lesson.Response
         """
         return self.get(f"/api/v1/courses/{course_id}")
 
@@ -85,7 +89,7 @@ class CoursesClient(APIClient):
 
         :param request: Словарь с title, maxScore, minScore, description, estimatedTime,
         previewFileId, createdByUserId.
-        :return: Ответ от сервера в виде объекта httpx.Response
+        :return: Ответ от сервера в виде объекта httpx_lesson.Response
         """
         return self.post("/api/v1/courses", json=request)
 
@@ -95,7 +99,7 @@ class CoursesClient(APIClient):
 
         :param course_id: Идентификатор курса.
         :param request: Словарь с title, maxScore, minScore, description, estimatedTime.
-        :return: Ответ от сервера в виде объекта httpx.Response
+        :return: Ответ от сервера в виде объекта httpx_lesson.Response
         """
         return self.patch(f"/api/v1/courses/{course_id}", json=request)
 
@@ -104,7 +108,7 @@ class CoursesClient(APIClient):
         Метод удаления курса.
 
         :param course_id: Идентификатор курса.
-        :return: Ответ от сервера в виде объекта httpx.Response
+        :return: Ответ от сервера в виде объекта httpx_lesson.Response
         """
         return self.delete(f"/api/v1/courses/{course_id}")
 
@@ -112,7 +116,8 @@ class CoursesClient(APIClient):
         response = self.create_course_api(request)
         return response.json()
 
-def get_courses_client(user: AuthenticationUserDict) -> CoursesClient:
+
+def get_courses_client(user: AuthenticationUserSchema) -> CoursesClient:
     """
     Функция создает экземпляр CoursesClient у уже встроенным HTTP-клиентом.
 

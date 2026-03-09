@@ -1,8 +1,9 @@
 from clients.courses.courses_client import get_courses_client, CreateCourseRequestDict
+from clients.exercises.exercises_client import CreateExerciseRequestDict, get_exercises_client
 from clients.files.files_client import get_files_client, CreateFileRequestDict
-from clients.private_http_builder import AuthenticationUserDict
+from clients.private_http_builder import AuthenticationUserSchema
 from clients.users.public_users_client import get_public_users_client, CreateUserRequestDict
-from tools.fakers import get_random_email
+from httpx_lesson.tools.fakers import get_random_email
 
 public_users_client = get_public_users_client()
 
@@ -15,17 +16,18 @@ create_user_request = CreateUserRequestDict(
 )
 create_user_response = public_users_client.create_user(create_user_request)
 
-authentication_user = AuthenticationUserDict(
+authentication_user = AuthenticationUserSchema(
     email=create_user_request['email'],
     password=create_user_request['password']
 )
 files_client = get_files_client(authentication_user)
 courses_client = get_courses_client(authentication_user)
+exercises_client = get_exercises_client(authentication_user)
 
 create_file_request = CreateFileRequestDict(
     filename="image.png",
     directory="images",
-    upload_file="../testdata/files/image.png"
+    upload_file="./testdata/files/image.png"
 )
 
 create_file_response = files_client.create_file(create_file_request)
@@ -43,3 +45,16 @@ create_course_request = CreateCourseRequestDict(
 
 create_course_response = courses_client.create_course(create_course_request)
 print('Create course data:', create_course_response)
+
+create_exercise_request = CreateExerciseRequestDict(
+    title="Курс 1",
+    courseId=create_course_response['course']['id'],
+    maxScore=100,
+    minScore=10,
+    orderIndex=1,
+    description="Курс 1 про....",
+    estimatedTime="10h",
+)
+
+create_exercise_response = exercises_client.create_exercise(create_exercise_request)
+print('Create exercise data:', create_exercise_response)

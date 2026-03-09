@@ -3,7 +3,7 @@ from typing import TypedDict, NotRequired
 from httpx import Response
 
 from clients.api_client import APIClient
-from clients.private_http_builder import get_private_http_client, AuthenticationUserDict
+from clients.private_http_builder import get_private_http_client, AuthenticationUserSchema
 
 
 class User(TypedDict):
@@ -43,7 +43,7 @@ class PrivateUsersClient(APIClient):
         """
         Метод получения текущего пользователя.
 
-        :return: Ответ от сервера в виде объекта httpx.Response
+        :return: Ответ от сервера в виде объекта httpx_lesson.Response
         """
         return self.get("/api/v1/users/me")
 
@@ -52,7 +52,7 @@ class PrivateUsersClient(APIClient):
         Метод получения пользователя по идентификатору.
 
         :param user_id: Идентификатор пользователя.
-        :return: Ответ от сервера в виде объекта httpx.Response
+        :return: Ответ от сервера в виде объекта httpx_lesson.Response
         """
         return self.get(f"/api/v1/users/{user_id}")
 
@@ -62,7 +62,7 @@ class PrivateUsersClient(APIClient):
 
         :param request: словарь с опциональными полями email, lastName, firstName, middleName
         :param user_id: Идентификатор пользователя.
-        :return: Ответ от сервера в виде объекта httpx.Response
+        :return: Ответ от сервера в виде объекта httpx_lesson.Response
         """
         return self.patch(f"/api/v1/users/me/{user_id}", json=request)
 
@@ -71,7 +71,7 @@ class PrivateUsersClient(APIClient):
         Метод удаления пользователя по идентификатору.
 
         :param user_id: Идентификатор пользователя.
-        :return: Ответ от сервера в виде объекта httpx.Response
+        :return: Ответ от сервера в виде объекта httpx_lesson.Response
         """
         return self.delete(f"/api/v1/users/me/{user_id}")
 
@@ -80,7 +80,7 @@ class PrivateUsersClient(APIClient):
         return response.json()
 
 
-def get_private_users_client(user: AuthenticationUserDict) -> PrivateUsersClient:
+def get_private_users_client(user: AuthenticationUserSchema) -> PrivateUsersClient:
     """
     Функция создает экземпляр PrivateUsersClient у уже встроенным HTTP-клиентом.
 

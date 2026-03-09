@@ -6,9 +6,9 @@ from typing import Any
 class APIClient:
     def __init__(self, client: Client):
         """
-        Базовый API клиент, принимающий объект httpx.Client.
+        Базовый API клиент, принимающий объект httpx_lesson.Client.
 
-        :param client: экземпляр httpx.Client для выполнения HTTP-запросов
+        :param client: экземпляр httpx_lesson.Client для выполнения HTTP-запросов
         """
         self.client = client
 
