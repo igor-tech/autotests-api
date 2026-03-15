@@ -7,7 +7,7 @@ from clients.private_http_builder import AuthenticationUserSchema, get_private_h
 
 class FilesClient(APIClient):
     """
-    Клиент для работы с /api/v1/files
+    Клиент для работы с /api/v1/files.py
     """
 
     def get_file_api(self, file_id) -> Response:
