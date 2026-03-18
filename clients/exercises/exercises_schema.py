@@ -10,6 +10,7 @@ class ExerciseSchema(BaseModel):
     """
     model_config = ConfigDict(populate_by_name=True)
 
+    id: str
     title: str
     course_id: str = Field(alias="courseId")
     min_score: int = Field(alias="minScore")
