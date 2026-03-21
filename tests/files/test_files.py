@@ -15,7 +15,7 @@ from tools.allure.tags import AllureTag
 from tools.assertions.base import assert_status_code
 from tools.assertions.files import assert_create_file_response, assert_get_file_response, \
     assert_create_file_with_empty_filename_response, assert_create_file_with_empty_directory_response, \
-    assert_file_not_found_response, assert_get_file_with_with_incorrect_file_id_response
+    assert_file_not_found_response, assert_get_file_with_incorrect_file_id_response
 from tools.assertions.schema import validate_json_schema
 
 
@@ -120,6 +120,6 @@ class TestFiles:
         response_data = ValidationErrorResponseSchema.model_validate_json(response.text)
 
         assert_status_code(response.status_code, HTTPStatus.UNPROCESSABLE_ENTITY)
-        assert_get_file_with_with_incorrect_file_id_response(response_data)
+        assert_get_file_with_incorrect_file_id_response(response_data)
 
         validate_json_schema(instance=response.json(), schema=response_data.model_json_schema())
