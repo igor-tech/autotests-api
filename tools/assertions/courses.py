@@ -5,6 +5,11 @@ from tools.assertions.files import assert_file
 from tools.assertions.users import assert_user
 import allure
 
+from tools.logger import get_logger
+
+logger = get_logger("COURSES_ASSERTIONS")
+
+
 @allure.step("Check update course response")
 def assert_update_course_response(request: UpdateCourseRequestSchema, response: UpdateCourseResponseSchema):
     """
@@ -14,11 +19,13 @@ def assert_update_course_response(request: UpdateCourseRequestSchema, response: 
     :param response: Ответ API с данными курса.
     :return: AssertionError: Если хотя бы одно поле не совпадает.
     """
+    logger.info("Check update course response")
     assert_equal(response.course.title, request.title, "title")
     assert_equal(response.course.max_score, request.max_score, "max_score")
     assert_equal(response.course.min_score, request.min_score, "min_score")
     assert_equal(response.course.description, request.description, "description")
     assert_equal(response.course.estimated_time, request.estimated_time, "estimated_time")
+
 
 @allure.step("Check course")
 def assert_course(actual: CourseSchema, expected: CourseSchema):
@@ -29,6 +36,7 @@ def assert_course(actual: CourseSchema, expected: CourseSchema):
     :param expected: Ожидаемые данные курса.
     :return: AssertionError: Если хотя бы одно поле не совпадает.
     """
+    logger.info("Check course")
     assert_equal(actual.id, expected.id, "id")
     assert_equal(actual.title, expected.title, "title")
     assert_equal(actual.max_score, expected.max_score, "max_score")
@@ -38,6 +46,7 @@ def assert_course(actual: CourseSchema, expected: CourseSchema):
 
     assert_file(actual.preview_file, expected.preview_file)
     assert_user(actual.created_by_user, expected.created_by_user)
+
 
 @allure.step("Check get courses response")
 def assert_get_courses_response(
@@ -51,10 +60,12 @@ def assert_get_courses_response(
     :param create_course_responses: Список API ответов при создании курсов.
     :raises AssertionError: Если данные курсов не совпадают.
     """
+    logger.info("Check get courses response")
     assert_length(get_courses_response.courses, create_course_responses, "courses")
 
     for index, create_course_request in enumerate(create_course_responses):
         assert_course(get_courses_response.courses[index], create_course_request.course)
+
 
 @allure.step("Check create course response")
 def assert_create_course_response(
@@ -68,6 +79,7 @@ def assert_create_course_response(
     :param response: Ответ API с данными курса.
     :return: AssertionError: Если хотя бы одно поле не совпадает.
     """
+    logger.info("Check create course response")
     assert_equal(response.course.title, request.title, "title")
     assert_equal(response.course.max_score, request.max_score, "max_score")
     assert_equal(response.course.min_score, request.min_score, "min_score")
