@@ -1,0 +1,18 @@
+INFO     HTTP_LOGGER:event_hooks.py:28 Make POST request to http://localhost:8000/api/v1/users
+INFO     HTTP_LOGGER:event_hooks.py:37 Got 200 OK from http://localhost:8000/api/v1/users
+INFO     HTTP_LOGGER:event_hooks.py:28 Make POST request to http://localhost:8000/api/v1/authentication/login
+INFO     HTTP_LOGGER:event_hooks.py:37 Got 200 OK from http://localhost:8000/api/v1/authentication/login
+INFO     HTTP_LOGGER:event_hooks.py:28 Make POST request to http://localhost:8000/api/v1/files
+INFO     HTTP_LOGGER:event_hooks.py:37 Got 200 OK from http://localhost:8000/api/v1/files
+INFO     HTTP_LOGGER:event_hooks.py:28 Make POST request to http://localhost:8000/api/v1/courses
+INFO     HTTP_LOGGER:event_hooks.py:37 Got 200 OK from http://localhost:8000/api/v1/courses
+INFO     HTTP_LOGGER:event_hooks.py:28 Make PATCH request to http://localhost:8000/api/v1/courses/c06990d4-ca49-471d-9b44-e0996b52e383
+INFO     HTTP_LOGGER:event_hooks.py:37 Got 200 OK from http://localhost:8000/api/v1/courses/c06990d4-ca49-471d-9b44-e0996b52e383
+INFO     BASE_ASSERTIONS:base.py:18 Check that response status code equals to '200'
+INFO     COURSES_ASSERTIONS:courses.py:22 Check update course response
+INFO     BASE_ASSERTIONS:base.py:36 Check that "title" equals to Imagine charge help cause amount hot free.
+INFO     BASE_ASSERTIONS:base.py:36 Check that "max_score" equals to 51
+INFO     BASE_ASSERTIONS:base.py:36 Check that "min_score" equals to 24
+INFO     BASE_ASSERTIONS:base.py:36 Check that "description" equals to Entire together key contain TV middle idea. Like take door fall cover population. Low require recently. Another often billion suddenly floor professor behind.
+INFO     BASE_ASSERTIONS:base.py:36 Check that "estimated_time" equals to 1 weeks
+INFO     SCHEMA_ASSERTIONS:schema.py:21 Validate JSON schema

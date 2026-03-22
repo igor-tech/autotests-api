@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTAzLTIyVDEzOjU0OjU2Ljc4ODk5MSIsInVzZXJfaWQiOiIyMDY5OThkZS0yYmU3LTRkZTYtOTE3Yy1mNWUwZDAyMTg2OTEifQ.1Ze4qd7n1X-QhbiIqjDYnSUB2OhsE6vR8nB86dFHiXM' \
+  -H 'content-length: 364' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Method defense south visit they my.","maxScore":76,"minScore":2,"description":"Low course recently pretty particularly hand. Cell later father produce.\nSmall well ability attorney break. Full night what pull want.","estimatedTime":"2 weeks","previewFileId":"f6f4fa4b-a088-4f63-9b91-b267fdf8cc4e","createdByUserId":"206998de-2be7-4de6-917c-f5e0d0218691"}'

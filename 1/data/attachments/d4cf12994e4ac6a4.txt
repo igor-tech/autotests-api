@@ -1,0 +1,26 @@
+INFO     HTTP_LOGGER:event_hooks.py:28 Make POST request to http://localhost:8000/api/v1/users
+INFO     HTTP_LOGGER:event_hooks.py:37 Got 200 OK from http://localhost:8000/api/v1/users
+INFO     HTTP_LOGGER:event_hooks.py:28 Make POST request to http://localhost:8000/api/v1/authentication/login
+INFO     HTTP_LOGGER:event_hooks.py:37 Got 200 OK from http://localhost:8000/api/v1/authentication/login
+INFO     HTTP_LOGGER:event_hooks.py:28 Make POST request to http://localhost:8000/api/v1/files
+INFO     HTTP_LOGGER:event_hooks.py:37 Got 200 OK from http://localhost:8000/api/v1/files
+INFO     HTTP_LOGGER:event_hooks.py:28 Make POST request to http://localhost:8000/api/v1/courses
+INFO     HTTP_LOGGER:event_hooks.py:37 Got 200 OK from http://localhost:8000/api/v1/courses
+INFO     HTTP_LOGGER:event_hooks.py:28 Make POST request to http://localhost:8000/api/v1/exercises
+INFO     HTTP_LOGGER:event_hooks.py:37 Got 200 OK from http://localhost:8000/api/v1/exercises
+INFO     HTTP_LOGGER:event_hooks.py:28 Make GET request to http://localhost:8000/api/v1/exercises?courseId=f8850237-672a-4587-9057-61979336e2d4
+INFO     HTTP_LOGGER:event_hooks.py:37 Got 200 OK from http://localhost:8000/api/v1/exercises?courseId=f8850237-672a-4587-9057-61979336e2d4
+INFO     BASE_ASSERTIONS:base.py:18 Check that response status code equals to '200'
+INFO     EXERCISES_ASSERTIONS:exercises.py:118 Check get exercises response
+INFO     BASE_ASSERTIONS:base.py:70 Check that length of "exercises" equals to 1
+INFO     EXERCISES_ASSERTIONS:exercises.py:67 Check exercise
+INFO     BASE_ASSERTIONS:base.py:36 Check that "id" equals to 4f656cfe-1b6d-402d-8341-ec6b6105e483
+INFO     BASE_ASSERTIONS:base.py:36 Check that "estimated_time" equals to 4 weeks
+INFO     BASE_ASSERTIONS:base.py:36 Check that "title" equals to Toward dream research central blue once.
+INFO     BASE_ASSERTIONS:base.py:36 Check that "course_id" equals to f8850237-672a-4587-9057-61979336e2d4
+INFO     BASE_ASSERTIONS:base.py:36 Check that "max_score" equals to 61
+INFO     BASE_ASSERTIONS:base.py:36 Check that "min_score" equals to 9
+INFO     BASE_ASSERTIONS:base.py:36 Check that "order_index" equals to 40
+INFO     BASE_ASSERTIONS:base.py:36 Check that "description" equals to Laugh bit only drop race. Need artist say.
+Every management almost business probably. Close couple bank be choice.
+INFO     SCHEMA_ASSERTIONS:schema.py:21 Validate JSON schema

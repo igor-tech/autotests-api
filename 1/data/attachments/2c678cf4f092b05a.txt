@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTAzLTIyVDEzOjU0OjU2LjA3OTU1OCIsInVzZXJfaWQiOiJhNTNjM2U5NC05N2Q1LTRiNmUtYTRlNy03ZDdlOGFhMzhjZjkifQ.CueerkwjkYh3wcxGBlFBcGi1m7BLoflpdYdrbFone20' \
+  -H 'content-length: 352' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Read store watch bad every election.","maxScore":58,"minScore":13,"description":"Majority money production very. Boy quickly not consumer drive. Bar buy thought opportunity particular right writer type.","estimatedTime":"6 weeks","previewFileId":"aee1a0c0-cf9e-4386-bbf9-27e7e7b0efc2","createdByUserId":"a53c3e94-97d5-4b6e-a4e7-7d7e8aa38cf9"}'

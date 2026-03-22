@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTAzLTIyVDEzOjU0OjU0Ljg1NTkwNCIsInVzZXJfaWQiOiI5M2VkOTVhOS04MzkxLTQwOWItOGExNS0wYWFmOTkwNjM5ZDUifQ.8P3ZGdxn5i8920JjN84cmP99eUbl3Mh7eAlj0cgER98' \
+  -H 'content-length: 396' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Scene nature start story total.","maxScore":95,"minScore":22,"description":"Pattern business however someone point outside mother teach. Worker pay camera animal wrong.\nAttorney spend ball network strong play music. Not particularly Mr personal.","estimatedTime":"9 weeks","previewFileId":"957b5e55-0273-4667-a468-865c4022ae1b","createdByUserId":"93ed95a9-8391-409b-8a15-0aaf990639d5"}'

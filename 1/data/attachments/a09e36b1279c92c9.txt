@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTAzLTIyVDEzOjU0OjUzLjYyMDA2MSIsInVzZXJfaWQiOiJkMmI2OWVmOS0xNDIzLTQ3ZjUtYTk2Ni1hMDlmZThkOWQ0NjkifQ.T-W4jXUSXXKiaZoXG5gPoH5ryv2YglFJvisi4JbbjIc' \
+  -H 'content-length: 369' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Product help everything pull.","maxScore":89,"minScore":28,"description":"Special receive no to worker now. Science time cell go face mother human yourself.\nTry expect exist. Father here value left pick friend various.","estimatedTime":"4 weeks","previewFileId":"76e64a36-e28c-4075-b33a-bb9a8c6e8646","createdByUserId":"d2b69ef9-1423-47f5-a966-a09fe8d9d469"}'

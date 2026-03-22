@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTAzLTIyVDEzOjU0OjU1LjQ2ODg5MyIsInVzZXJfaWQiOiJmODMwNjA0OS02NzQ1LTRmNzYtOTI2Ni1iNWU1NjE3ODY3MjkifQ.twWYokOJ1pmFkhiI4MGomoVUVspJEFZ-9S7u8jcLjow' \
+  -H 'content-length: 411' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Say challenge care wonder personal support group.","maxScore":62,"minScore":8,"description":"Six position economy pressure effect responsibility. Lot rest tax road report line. Thank star minute remain six example risk.\nLive board include book news book that.","estimatedTime":"10 weeks","previewFileId":"50490dd7-3151-4766-96ac-479d523a7113","createdByUserId":"f8306049-6745-4f76-9266-b5e561786729"}'

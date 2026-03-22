@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTAzLTIyVDEzOjU0OjU0LjI0MzUyOSIsInVzZXJfaWQiOiI1YjZhMmNhNi0wNGQ5LTRhMTctYWVhMy0yOWUzZWRhMWQxZDcifQ.rXzUU57UeBai4FjRdjOpe4G9siT-qBg77ZXLOSoPcIs' \
+  -H 'content-length: 405' \
+  -H 'content-type: application/json' \
+  -d '{"title":"In traditional wrong ten boy might civil.","maxScore":60,"minScore":11,"description":"Evidence operation door economy discussion arrive. To television person former sure public.\nEarly choose yet lay.\nAbove same require. I part type to. Who between year.","estimatedTime":"8 weeks","previewFileId":"cd19b262-49e1-4131-8ae7-d7cf99c634f8","createdByUserId":"5b6a2ca6-04d9-4a17-aea3-29e3eda1d1d7"}'

@@ -1,0 +1,11 @@
+curl -X 'PATCH' \
+  'http://localhost:8000/api/v1/courses/c06990d4-ca49-471d-9b44-e0996b52e383' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTAzLTIyVDEzOjU0OjUzLjYyMDA2MSIsInVzZXJfaWQiOiJkMmI2OWVmOS0xNDIzLTQ3ZjUtYTk2Ni1hMDlmZThkOWQ0NjkifQ.T-W4jXUSXXKiaZoXG5gPoH5ryv2YglFJvisi4JbbjIc' \
+  -H 'content-length: 283' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Imagine charge help cause amount hot free.","maxScore":51,"minScore":24,"description":"Entire together key contain TV middle idea. Like take door fall cover population. Low require recently. Another often billion suddenly floor professor behind.","estimatedTime":"1 weeks"}'

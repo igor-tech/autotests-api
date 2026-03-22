@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTAzLTIyVDEzOjU0OjUyLjk5NzIyMiIsInVzZXJfaWQiOiJhODk3ODU3MC02YzNiLTQ0MzMtOTY5My1jZmM5ZDYzN2VhNTgifQ.f7qpuFGg4HTxFqlBBTxqHPXJkcgVu27riDn8sq_kaQ8' \
+  -H 'content-length: 398' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Sit full successful difficult bad hope voice yourself.","maxScore":98,"minScore":14,"description":"Service town only low remember issue trip old. Prevent debate recently add rule and own image. Decade time nearly offer record simple training happy.","estimatedTime":"7 weeks","previewFileId":"25edcb9d-3b35-4d18-9fa4-5b7bb0db1de4","createdByUserId":"a8978570-6c3b-4433-9693-cfc9d637ea58"}'

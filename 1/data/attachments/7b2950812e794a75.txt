@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/exercises' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTAzLTIyVDEzOjU0OjU1LjQ2ODg5MyIsInVzZXJfaWQiOiJmODMwNjA0OS02NzQ1LTRmNzYtOTI2Ni1iNWU1NjE3ODY3MjkifQ.twWYokOJ1pmFkhiI4MGomoVUVspJEFZ-9S7u8jcLjow' \
+  -H 'content-length: 387' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Alone chair statement technology behind.","courseId":"9482cc73-661d-4541-8e38-ff139a161c25","maxScore":94,"minScore":20,"orderIndex":63,"description":"Music land training chance piece product. Could teach always explain perhaps fly.\nColor unit position democratic. Knowledge then his happy letter door notice.\nFirm perform play wear value him sea.","estimatedTime":"9 weeks"}'

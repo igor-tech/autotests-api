@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/exercises' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTAzLTIyVDEzOjU0OjU0Ljg1NTkwNCIsInVzZXJfaWQiOiI5M2VkOTVhOS04MzkxLTQwOWItOGExNS0wYWFmOTkwNjM5ZDUifQ.8P3ZGdxn5i8920JjN84cmP99eUbl3Mh7eAlj0cgER98' \
+  -H 'content-length: 254' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Tough head why sport sell national.","courseId":"eaf4f0ca-384e-47b5-bd68-082496aac2f1","maxScore":97,"minScore":24,"orderIndex":81,"description":"Place set child nation. Wish choose author prepare bill stuff out war.","estimatedTime":"3 weeks"}'
