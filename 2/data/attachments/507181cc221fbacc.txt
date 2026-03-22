@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/exercises' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTAzLTIyVDE0OjE0OjQxLjE1Mzc1NiIsInVzZXJfaWQiOiIwNzQ4ZTVhZi05ZWFlLTQ0MDctYjU1MC1kZTRjYzAzZjc1ZmQifQ.QlS07u9foFkXCrWLEiyfJdGE_bYHb6MXF6nj0nlkEVU' \
+  -H 'content-length: 358' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Place do eight growth write specific around.","courseId":"5858f509-f775-4fd6-a844-97479ea80989","maxScore":96,"minScore":5,"orderIndex":61,"description":"The ahead represent member course south. Bit rest this husband couple. Herself coach heavy camera product. Detail magazine also here according however newspaper fall.","estimatedTime":"6 weeks"}'

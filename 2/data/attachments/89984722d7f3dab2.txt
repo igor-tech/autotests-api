@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTAzLTIyVDE0OjE0OjQyLjQzNzk5NCIsInVzZXJfaWQiOiJjMDliYmEwNy1mM2RiLTQ2MzgtYmViMC1kY2Q1YzkzNmQyNTkifQ.Y54nwshUi4t3WyAUjW0zhmSCege2wbMkYo_rSPEbtg0' \
+  -H 'content-length: 334' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Author choice ball.","maxScore":85,"minScore":14,"description":"Capital protect maybe research. Again watch must thus evening daughter affect home. However pretty computer money offer.","estimatedTime":"3 weeks","previewFileId":"880dd6da-d879-4c04-b0cd-3b4d117deb8a","createdByUserId":"c09bba07-f3db-4638-beb0-dcd5c936d259"}'

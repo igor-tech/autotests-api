@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTAzLTIyVDE0OjE0OjQxLjgxNjk5MSIsInVzZXJfaWQiOiIyMTY1OTMyMC1hOTc1LTQ2OTMtYjVmMi1mYjg4OWFjN2UzZTgifQ.huVglnISPZT50u_9rr5vz52czInfscbsaPAxKzMt5vQ' \
+  -H 'content-length: 343' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Part memory say bank.","maxScore":64,"minScore":21,"description":"Way wear happy pressure. Purpose if politics finally one computer per. Stay operation gas agency. Discussion until man outside.","estimatedTime":"5 weeks","previewFileId":"9f36b435-ca77-41ef-ac7a-7273e79bc3e9","createdByUserId":"21659320-a975-4693-b5f2-fb889ac7e3e8"}'

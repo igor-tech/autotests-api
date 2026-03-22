@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTAzLTIyVDE0OjE0OjM5LjM4NzIyMCIsInVzZXJfaWQiOiI0YzE1NzJjNy00MmE0LTRjYTQtOGI4Yi1kZWIyZmM3N2Q3NDUifQ.lugX2KpcBjnrrW3GigE4ISXAU8ISB_eNjUgTQUyU48M' \
+  -H 'content-length: 362' \
+  -H 'content-type: application/json' \
+  -d '{"title":"But past discussion of.","maxScore":60,"minScore":26,"description":"Program line return environmental own fill however. Sort girl scene avoid idea move protect. Power cultural concern could sign often the result.","estimatedTime":"6 weeks","previewFileId":"3e9fe16c-2c2b-4b03-bafc-2eab5ee0f92d","createdByUserId":"4c1572c7-42a4-4ca4-8b8b-deb2fc77d745"}'

@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTAzLTIyVDE0OjE0OjM5Ljk3NDM0NCIsInVzZXJfaWQiOiJmMDljMGZhNS04MDI5LTRmNDItYjE3YS03ZjZhYmU1YTJhNDYifQ.I6i6BH-VgZJMC0AgTRArxP_qIQGKTgTyvzsZnj_JiYQ' \
+  -H 'content-length: 382' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Toward practice relationship black guy size.","maxScore":55,"minScore":11,"description":"Through yet little think cell.\nFather relate carry provide. Class brother rise every.\nYou produce usually teach. Stuff his service determine.","estimatedTime":"4 weeks","previewFileId":"24aac6f0-49af-4541-8ad0-bb29f404567a","createdByUserId":"f09c0fa5-8029-4f42-b17a-7f6abe5a2a46"}'

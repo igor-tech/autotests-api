@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTAzLTIyVDE0OjE0OjQwLjU2NDQ0NSIsInVzZXJfaWQiOiJlM2FhZGI2Yy0xMGVjLTRlMWMtODJjZS05MmIyYTNiNTdjZDQifQ.hCcQfq6DhcKAnFhJKMbwaP6_hjKJDBfy7HBiEP6b43k' \
+  -H 'content-length: 415' \
+  -H 'content-type: application/json' \
+  -d '{"title":"New training never itself fire peace official.","maxScore":84,"minScore":12,"description":"Blood member situation exist arrive news. Plan book reveal such staff money key either.\nRisk cut while also audience exactly reflect. Ahead mean woman then subject leg act.","estimatedTime":"10 weeks","previewFileId":"f785ebf6-fe2e-45c7-84d5-7c48b2a549a0","createdByUserId":"e3aadb6c-10ec-4e1c-82ce-92b2a3b57cd4"}'

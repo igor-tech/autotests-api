@@ -1,0 +1,26 @@
+INFO     HTTP_LOGGER:event_hooks.py:28 Make POST request to http://localhost:8000/api/v1/users
+INFO     HTTP_LOGGER:event_hooks.py:37 Got 200 OK from http://localhost:8000/api/v1/users
+INFO     HTTP_LOGGER:event_hooks.py:28 Make POST request to http://localhost:8000/api/v1/authentication/login
+INFO     HTTP_LOGGER:event_hooks.py:37 Got 200 OK from http://localhost:8000/api/v1/authentication/login
+INFO     HTTP_LOGGER:event_hooks.py:28 Make POST request to http://localhost:8000/api/v1/files
+INFO     HTTP_LOGGER:event_hooks.py:37 Got 200 OK from http://localhost:8000/api/v1/files
+INFO     HTTP_LOGGER:event_hooks.py:28 Make POST request to http://localhost:8000/api/v1/courses
+INFO     HTTP_LOGGER:event_hooks.py:37 Got 200 OK from http://localhost:8000/api/v1/courses
+INFO     HTTP_LOGGER:event_hooks.py:28 Make POST request to http://localhost:8000/api/v1/exercises
+INFO     HTTP_LOGGER:event_hooks.py:37 Got 200 OK from http://localhost:8000/api/v1/exercises
+INFO     HTTP_LOGGER:event_hooks.py:28 Make GET request to http://localhost:8000/api/v1/exercises?courseId=a4d2ca7c-a559-4c61-8988-8cfcaa0ecdd3
+INFO     HTTP_LOGGER:event_hooks.py:37 Got 200 OK from http://localhost:8000/api/v1/exercises?courseId=a4d2ca7c-a559-4c61-8988-8cfcaa0ecdd3
+INFO     BASE_ASSERTIONS:base.py:18 Check that response status code equals to '200'
+INFO     EXERCISES_ASSERTIONS:exercises.py:118 Check get exercises response
+INFO     BASE_ASSERTIONS:base.py:70 Check that length of "exercises" equals to 1
+INFO     EXERCISES_ASSERTIONS:exercises.py:67 Check exercise
+INFO     BASE_ASSERTIONS:base.py:36 Check that "id" equals to f51eab76-9cd0-4732-ae1a-ef8f191416d6
+INFO     BASE_ASSERTIONS:base.py:36 Check that "estimated_time" equals to 8 weeks
+INFO     BASE_ASSERTIONS:base.py:36 Check that "title" equals to Issue situation sign anything while thought table whose.
+INFO     BASE_ASSERTIONS:base.py:36 Check that "course_id" equals to a4d2ca7c-a559-4c61-8988-8cfcaa0ecdd3
+INFO     BASE_ASSERTIONS:base.py:36 Check that "max_score" equals to 95
+INFO     BASE_ASSERTIONS:base.py:36 Check that "min_score" equals to 22
+INFO     BASE_ASSERTIONS:base.py:36 Check that "order_index" equals to 29
+INFO     BASE_ASSERTIONS:base.py:36 Check that "description" equals to Dream dog suffer authority. Will strategy story among back least interview. Start guy medical society.
+Little north mention memory. Represent reach collection meeting.
+INFO     SCHEMA_ASSERTIONS:schema.py:21 Validate JSON schema

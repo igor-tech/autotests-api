@@ -1,0 +1,11 @@
+curl -X 'PATCH' \
+  'http://localhost:8000/api/v1/courses/16b71870-e913-430f-b568-1ffb17b76e25' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTAzLTIyVDE0OjE0OjM4LjcyODMzMiIsInVzZXJfaWQiOiJlNDM1ZDJiZS03YjhjLTRkNWItYTc3Ny1kNzMxYzFkMjNiMzQifQ.NlxHAywXSHL7yFKKxaQrF6Wvl5-PyUeSztciXEzkF3Q' \
+  -H 'content-length: 324' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Glass bed institution material hard hit which.","maxScore":55,"minScore":17,"description":"Tv despite test trade.\nHere understand relate woman compare be rate. Hospital table down. Support southern free happy or yard image.\nStructure energy win participant south. Talk sure note day.","estimatedTime":"10 weeks"}'
