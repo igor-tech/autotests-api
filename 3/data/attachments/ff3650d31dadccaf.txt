@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTAzLTIyVDE2OjU0OjUwLjIzOTQyOSIsInVzZXJfaWQiOiI2OGZlNmI5NS1hOGFlLTQ0MWItOGU1ZC1iNzgxMTFlMDg2YTMifQ.pSCmJ8alqZzoZNqpzivwia9vFEiXOkkKCMUunswyPvc' \
+  -H 'content-length: 361' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Stage prevent agency bring total member decide pick.","maxScore":100,"minScore":20,"description":"Message something sing something operation forget. Step citizen chance great I. Page people rock television they.","estimatedTime":"9 weeks","previewFileId":"01a52515-f1dc-4e09-b9e0-1f714ffb937d","createdByUserId":"68fe6b95-a8ae-441b-8e5d-b78111e086a3"}'

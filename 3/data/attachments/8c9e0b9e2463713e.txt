@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTAzLTIyVDE2OjU0OjUzLjM1MTk2MyIsInVzZXJfaWQiOiI2YTEzNGM3Yy0zMzU1LTRkMDItYTM0NC1mODc1OGJmYjA0NGQifQ.0gUJMs34fuAMdNw1LhW-Fq0iNvfDVI0jKuiSJVPFt8U' \
+  -H 'content-length: 424' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Trial statement sister rock clear.","maxScore":64,"minScore":19,"description":"Determine nation pay shake understand daughter appear those. Machine cup current science. Understand raise establish.\nEvening movie reveal you manager town energy defense. Race bit heavy friend.","estimatedTime":"2 weeks","previewFileId":"7b95efb6-e68a-4552-b960-8f6006099230","createdByUserId":"6a134c7c-3355-4d02-a344-f8758bfb044d"}'

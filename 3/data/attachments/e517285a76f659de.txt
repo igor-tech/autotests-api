@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTAzLTIyVDE2OjU0OjUyLjc1OTI2NiIsInVzZXJfaWQiOiI2MzYyNmZkYi1jMGJjLTRjNGQtODg1Ni03ODZiMWY1YmQyOTAifQ.lUyHiwNSQYRtuphGtrY6PNQUv8X3mto-xRNg8TZVQ4s' \
+  -H 'content-length: 453' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Difficult message television nature available grow service ground.","maxScore":67,"minScore":24,"description":"Discuss great they article. Theory may heavy film position. Around him effort brother much exactly bed it.\nGroup I political explain hundred rock. Senior develop anyone reality or measure in.","estimatedTime":"5 weeks","previewFileId":"e9ba1761-439f-4db1-877e-b482906cb902","createdByUserId":"63626fdb-c0bc-4c4d-8856-786b1f5bd290"}'

@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTAzLTIyVDE2OjU0OjUwLjkwMjg3MyIsInVzZXJfaWQiOiJhNzZlYjZlZC00ZDk5LTQ4MjItOTY0ZS04MjRkZDJjNmEyZTIifQ.SJSkQR6r7i8djqbvRy00QlZadCJaSZHuuIoWEDDCmJQ' \
+  -H 'content-length: 424' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Which member season bring cover by lay.","maxScore":94,"minScore":13,"description":"Staff decide return mean whatever court technology. Game dark up identify. Laugh protect strategy relationship agent glass.\nAct nice of. Tell there option. Theory our design strong society.","estimatedTime":"8 weeks","previewFileId":"e5470c98-b945-4a75-9fc7-06411ab86bf2","createdByUserId":"a76eb6ed-4d99-4822-964e-824dd2c6a2e2"}'

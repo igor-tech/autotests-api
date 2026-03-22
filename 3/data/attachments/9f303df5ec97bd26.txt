@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTAzLTIyVDE2OjU0OjQ4Ljc1MDkxOCIsInVzZXJfaWQiOiJiZDk2ZjUxMy1iNDYwLTQ0ZWYtYTI3Ny0xZTlkYTRmODAyZGUifQ.dCf4Yz50oUWWxS98k1Q4LI074Y7qdWrgbOMNuCqX0_I' \
+  -H 'content-length: 428' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Hit game foreign report add worry.","maxScore":98,"minScore":9,"description":"Something charge public call list Democrat before election. Garden week glass down recognize common successful.\nTeach PM nearly expect happy yeah speak human. Majority cold body power system example.","estimatedTime":"4 weeks","previewFileId":"333a2e85-522e-4a0f-9ef4-3ff0f7eb6c9a","createdByUserId":"bd96f513-b460-44ef-a277-1e9da4f802de"}'

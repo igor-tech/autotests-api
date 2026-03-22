@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTAzLTIyVDE2OjU0OjQ5LjY0NzIwMSIsInVzZXJfaWQiOiI4OWE5ZWQ1MC03ODFlLTRhMmItYThlOC1kMzYzOWY2MTQ4ODUifQ.9iz7E5K6imQ2aLReNxd0K2ZXbtIoutxJChPpyzwxLGM' \
+  -H 'content-length: 368' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Physical force dream dark seven walk top.","maxScore":81,"minScore":4,"description":"Five adult carry beat politics. Doctor important say they Democrat fly. Score performance probably information tree direction growth.","estimatedTime":"5 weeks","previewFileId":"77b285d2-ea0e-4e85-b14f-0ff3d76d7b02","createdByUserId":"89a9ed50-781e-4a2b-a8e8-d3639f614885"}'

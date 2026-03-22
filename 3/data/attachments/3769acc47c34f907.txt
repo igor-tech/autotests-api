@@ -1,0 +1,25 @@
+INFO     HTTP_LOGGER:event_hooks.py:28 Make POST request to http://localhost:8000/api/v1/users
+INFO     HTTP_LOGGER:event_hooks.py:37 Got 200 OK from http://localhost:8000/api/v1/users
+INFO     HTTP_LOGGER:event_hooks.py:28 Make POST request to http://localhost:8000/api/v1/authentication/login
+INFO     HTTP_LOGGER:event_hooks.py:37 Got 200 OK from http://localhost:8000/api/v1/authentication/login
+INFO     HTTP_LOGGER:event_hooks.py:28 Make POST request to http://localhost:8000/api/v1/files
+INFO     HTTP_LOGGER:event_hooks.py:37 Got 200 OK from http://localhost:8000/api/v1/files
+INFO     HTTP_LOGGER:event_hooks.py:28 Make POST request to http://localhost:8000/api/v1/courses
+INFO     HTTP_LOGGER:event_hooks.py:37 Got 200 OK from http://localhost:8000/api/v1/courses
+INFO     HTTP_LOGGER:event_hooks.py:28 Make POST request to http://localhost:8000/api/v1/exercises
+INFO     HTTP_LOGGER:event_hooks.py:37 Got 200 OK from http://localhost:8000/api/v1/exercises
+INFO     HTTP_LOGGER:event_hooks.py:28 Make GET request to http://localhost:8000/api/v1/exercises/f181dcd7-975d-4b3a-b2bf-a8c7f587c364
+INFO     HTTP_LOGGER:event_hooks.py:37 Got 200 OK from http://localhost:8000/api/v1/exercises/f181dcd7-975d-4b3a-b2bf-a8c7f587c364
+INFO     BASE_ASSERTIONS:base.py:18 Check that response status code equals to '200'
+INFO     EXERCISES_ASSERTIONS:exercises.py:89 Check get exercise response
+INFO     EXERCISES_ASSERTIONS:exercises.py:67 Check exercise
+INFO     BASE_ASSERTIONS:base.py:36 Check that "id" equals to f181dcd7-975d-4b3a-b2bf-a8c7f587c364
+INFO     BASE_ASSERTIONS:base.py:36 Check that "estimated_time" equals to 3 weeks
+INFO     BASE_ASSERTIONS:base.py:36 Check that "title" equals to Expect set space friend off.
+INFO     BASE_ASSERTIONS:base.py:36 Check that "course_id" equals to 3f1de58f-9489-4939-be09-6fb7fc11fe0c
+INFO     BASE_ASSERTIONS:base.py:36 Check that "max_score" equals to 96
+INFO     BASE_ASSERTIONS:base.py:36 Check that "min_score" equals to 1
+INFO     BASE_ASSERTIONS:base.py:36 Check that "order_index" equals to 16
+INFO     BASE_ASSERTIONS:base.py:36 Check that "description" equals to Shake wall religious analysis weight mission. Offer between heavy quality. Near traditional close according really help middle.
+Series of after early degree behind television. Wait sense star seven.
+INFO     SCHEMA_ASSERTIONS:schema.py:21 Validate JSON schema

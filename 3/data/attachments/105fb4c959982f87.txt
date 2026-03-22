@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTAzLTIyVDE2OjU0OjUxLjQ5NDAzOSIsInVzZXJfaWQiOiI5NzU4NzRkYi01ZTFlLTQ5ODctODE4MC03NWMyYzQ3N2UxYTcifQ.xaIpIYW8mXKvkh3ncTEkgy0S-DtAJ4z3AFoCAySb0wU' \
+  -H 'content-length: 375' \
+  -H 'content-type: application/json' \
+  -d '{"title":"In poor only study door main American way.","maxScore":84,"minScore":9,"description":"Table now recognize main thousand help. Perhaps reduce coach almost interview reveal.\nAppear ask for course red. Nation owner dark lawyer.","estimatedTime":"3 weeks","previewFileId":"274d082b-3a4a-4568-8656-b91ffe1d3216","createdByUserId":"975874db-5e1e-4987-8180-75c2c477e1a7"}'
