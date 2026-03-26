@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTAzLTI2VDE4OjEzOjQ0Ljg3MzA0MiIsInVzZXJfaWQiOiJiOTVhMjlmOS1iNjBhLTQ2ZDgtYjI1YS0yYjQzMGMwYmJhMTAifQ.7qU_nUsUCQeNsHfCAAxL3otHtKQBXjp2u7HeRftcnzY' \
+  -H 'content-length: 395' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Financial central particularly seat toward become.","maxScore":55,"minScore":11,"description":"Project under name. Determine leave magazine. Say first event visit.\nMention explain majority first in deep. To check fly give knowledge drive issue.","estimatedTime":"3 weeks","previewFileId":"46f8a339-e27a-4c45-91a5-b19aebd0ab7e","createdByUserId":"b95a29f9-b60a-46d8-b25a-2b430c0bba10"}'

@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTAzLTI2VDE4OjEzOjQzLjAzODAyOCIsInVzZXJfaWQiOiIxZGMxMzY1OS1hYWVjLTRiOTQtYjdiYi0xNGRlZDYyYTQ5ZTQifQ.aRn0SUu_on2pRaO1LbP77anYYHoMzZ8FxMoohVKok0U' \
+  -H 'content-length: 360' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Lawyer enough bank carry.","maxScore":67,"minScore":27,"description":"Budget lead worker activity. Life education father item PM.\nBlood ask knowledge edge official. Worry participant series together land last.","estimatedTime":"6 weeks","previewFileId":"fa4db9e1-f3f7-4872-ac50-dc5857b4ed79","createdByUserId":"1dc13659-aaec-4b94-b7bb-14ded62a49e4"}'

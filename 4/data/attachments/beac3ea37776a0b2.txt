@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTAzLTI2VDE4OjEzOjQ0LjI4NTIzOSIsInVzZXJfaWQiOiI2YzBhMzg4Ni1hOGZiLTQ4ZTItYjEyMy1lMDY2N2RmNWU0OTkifQ.P64w5HyMyEMRWD9ahVYR3aJ46UHbHLyYOaxhTky9yEY' \
+  -H 'content-length: 328' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Rate expert fund bar ever real machine letter.","maxScore":95,"minScore":10,"description":"Must couple say important material under common. Door use gun try nor away vote system.","estimatedTime":"5 weeks","previewFileId":"76054091-fa10-47a1-9eb4-38aabbbce6c0","createdByUserId":"6c0a3886-a8fb-48e2-b123-e0667df5e499"}'

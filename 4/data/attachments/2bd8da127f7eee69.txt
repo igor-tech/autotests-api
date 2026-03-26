@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTAzLTI2VDE4OjEzOjQ3LjM1MTE5OCIsInVzZXJfaWQiOiIwMDAyOWU0Ny1mMmE5LTQ0MzItYjkxOC0wZDVmYTBhNTYwN2IifQ.ngHqZZBwJfFwua9pBLOmmvUeSvkru2wa9STM-_oJWRI' \
+  -H 'content-length: 376' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Certain modern day office.","maxScore":62,"minScore":29,"description":"Church particularly network choice agency resource enter. Lay happy traditional around.\nExecutive hair laugh best former. Society marriage network policy.","estimatedTime":"5 weeks","previewFileId":"43f3cac3-b0a4-4071-9cc9-41dd84aab141","createdByUserId":"00029e47-f2a9-4432-b918-0d5fa0a5607b"}'

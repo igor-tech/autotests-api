@@ -1,0 +1,25 @@
+INFO     HTTP_LOGGER:event_hooks.py:28 Make POST request to http://localhost:8000/api/v1/users
+INFO     HTTP_LOGGER:event_hooks.py:37 Got 200 OK from http://localhost:8000/api/v1/users
+INFO     HTTP_LOGGER:event_hooks.py:28 Make POST request to http://localhost:8000/api/v1/authentication/login
+INFO     HTTP_LOGGER:event_hooks.py:37 Got 200 OK from http://localhost:8000/api/v1/authentication/login
+INFO     HTTP_LOGGER:event_hooks.py:28 Make POST request to http://localhost:8000/api/v1/files
+INFO     HTTP_LOGGER:event_hooks.py:37 Got 200 OK from http://localhost:8000/api/v1/files
+INFO     HTTP_LOGGER:event_hooks.py:28 Make POST request to http://localhost:8000/api/v1/courses
+INFO     HTTP_LOGGER:event_hooks.py:37 Got 200 OK from http://localhost:8000/api/v1/courses
+INFO     HTTP_LOGGER:event_hooks.py:28 Make POST request to http://localhost:8000/api/v1/exercises
+INFO     HTTP_LOGGER:event_hooks.py:37 Got 200 OK from http://localhost:8000/api/v1/exercises
+INFO     HTTP_LOGGER:event_hooks.py:28 Make GET request to http://localhost:8000/api/v1/exercises/45896241-be86-4298-939f-381123f3d470
+INFO     HTTP_LOGGER:event_hooks.py:37 Got 200 OK from http://localhost:8000/api/v1/exercises/45896241-be86-4298-939f-381123f3d470
+INFO     BASE_ASSERTIONS:base.py:18 Check that response status code equals to '200'
+INFO     EXERCISES_ASSERTIONS:exercises.py:89 Check get exercise response
+INFO     EXERCISES_ASSERTIONS:exercises.py:67 Check exercise
+INFO     BASE_ASSERTIONS:base.py:36 Check that "id" equals to 45896241-be86-4298-939f-381123f3d470
+INFO     BASE_ASSERTIONS:base.py:36 Check that "estimated_time" equals to 6 weeks
+INFO     BASE_ASSERTIONS:base.py:36 Check that "title" equals to Have federal trade behind success toward.
+INFO     BASE_ASSERTIONS:base.py:36 Check that "course_id" equals to 55373276-bd50-438d-93de-7232716b6794
+INFO     BASE_ASSERTIONS:base.py:36 Check that "max_score" equals to 54
+INFO     BASE_ASSERTIONS:base.py:36 Check that "min_score" equals to 9
+INFO     BASE_ASSERTIONS:base.py:36 Check that "order_index" equals to 27
+INFO     BASE_ASSERTIONS:base.py:36 Check that "description" equals to Eight property strategy ground just sea work. Trip them term section. These range care support market.
+Various base put various produce bar. Technology meeting although sure well.
+INFO     SCHEMA_ASSERTIONS:schema.py:21 Validate JSON schema

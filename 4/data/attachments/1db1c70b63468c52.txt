@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTAzLTI2VDE4OjEzOjQ1LjQ2MDA0OSIsInVzZXJfaWQiOiJlODU3MTk0ZS1kMjA3LTRmMDMtODUxOC1jODRlZTFmZDUyNTIifQ.h10l1Si9GEIvJC4TRqhnMhE5K1cokMhIUE08iFJL9k4' \
+  -H 'content-length: 396' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Likely own cold physical blood education it.","maxScore":51,"minScore":21,"description":"Out office officer perhaps do issue support surface. Stop develop improve red likely system pattern white. Past phone fear push may system. Score arm always.","estimatedTime":"7 weeks","previewFileId":"e564cf82-9610-4f25-a766-682acb685477","createdByUserId":"e857194e-d207-4f03-8518-c84ee1fd5252"}'

@@ -1,0 +1,8 @@
+curl -X 'GET' \
+  'http://localhost:8000/api/v1/files/incorrect-file-id' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTAzLTI2VDE4OjEzOjUwLjkyMzg2OSIsInVzZXJfaWQiOiI0M2JkYjY1Mi1iNGE0LTQ1MjEtYmJkNi0zYzMwOThjNTNiMGYifQ.NuLEPTpKzGNFadKWK6LOM8ioPemIIGg_Zk8hEcHL3eI'

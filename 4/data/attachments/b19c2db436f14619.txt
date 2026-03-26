@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTAzLTI2VDE4OjEzOjQ2LjExNTg0MiIsInVzZXJfaWQiOiJjNzZjOWY0Ni0zYjc5LTQwZDktOGM2Yi04NjVjMjZhNTMxYmIifQ.dK6U3xDAs1_xRiwVOXPREGV4xtnpEv8p59FYseMgqUk' \
+  -H 'content-length: 406' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Lay represent easy.","maxScore":94,"minScore":8,"description":"Many door fund purpose challenge consumer. Hundred first actually.\nCrime collection start by themselves total pattern. Star wrong debate other. Style know wind be present recently media green.","estimatedTime":"8 weeks","previewFileId":"54e0879d-fa2f-470c-a4ec-885fc3dc8844","createdByUserId":"c76c9f46-3b79-40d9-8c6b-865c26a531bb"}'
