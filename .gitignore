@@ -10,3 +10,8 @@ allure-results
 allure-report
 
 .env
+
+# swagger-coverage
+swagger-coverage/
+
+.DS_Store

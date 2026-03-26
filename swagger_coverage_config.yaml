@@ -1,0 +1,16 @@
+services:
+  - key: "api-course"  # Unique identifier for the service.
+    name: "API Course"  # Name of the service.
+    tags: [ "API", "COURSES" ]  # Optional list of tags to describe the service.
+    swagger_url: "http://localhost:8000/openapi.json"  # Optional URL to the Swagger documentation.
+
+# Directory where coverage results will be stored.
+results_dir: "./swagger-coverage/coverage-results"  # This path is relative to the current working directory.
+
+# File where the history of coverage results is saved.
+history_file: "./swagger-coverage/coverage-history.json"  # This path is relative to the current working directory.
+history_retention_limit: 30  # The maximum number of history records to keep.
+
+# File paths for reports. These are optional, and if not set, reports will not be generated.
+html_report_file: "./swagger-coverage/index.html"  # Path to the HTML report file.
+json_report_file: "./swagger-coverage/coverage-report.json"  # Path to the JSON report file.

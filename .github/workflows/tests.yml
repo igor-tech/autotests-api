@@ -29,26 +29,66 @@ jobs:
 
       - name: Start a test server
         env:
-          APP_HOST: "http://localhost:8000"
-          DATABASE_URL: "sqlite+aiosqlite:///./local.db"
-          JWT_ALGORITHM: "HS256"
-          JWT_SECRET_KEY: "qa-automation-engineer-api-course-secret-key"
-          JWT_ACCESS_TOKEN_EXPIRE: 1800
-          JWT_REFRESH_TOKEN_EXPIRE: 5184000
+          APP_HOST: ${{ vars.APP_HOST }}
+          DATABASE_URL: ${{ vars.DATABASE_URL }}
+          JWT_ALGORITHM: ${{ vars.JWT_ALGORITHM }}
+          JWT_SECRET_KEY: ${{ secrets.JWT_SECRET_KEY }}
+          JWT_ACCESS_TOKEN_EXPIRE: ${{ vars.JWT_ACCESS_TOKEN_EXPIRE }}
+          JWT_REFRESH_TOKEN_EXPIRE: ${{ vars.JWT_REFRESH_TOKEN_EXPIRE }}
         run: uvicorn main:app --host 0.0.0.0 --port 8000 --app-dir ./qa-automation-engineer-api-course &
+
+      - name: Wait for test server to be ready
+        run: |
+          for i in $(seq 1 30); do
+            if curl -s http://localhost:8000/openapi.json > /dev/null; then
+              echo "Server is ready"
+              exit 0
+            fi
+            sleep 1
+          done
+          echo "Server failed to start"
+          exit 1
 
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install -r requirements.txt  
+          pip install -r requirements.txt
 
       - name: Run API tests with pytest and generate Allure results
         env:
-          TEST_DATA.IMAGE_PNG_FILE: "./testdata/files/image.png"
-          HTTP_CLIENT.URL: "http://localhost:8000"
-          HTTP_CLIENT.TIMEOUT: 100
+          TEST_DATA.IMAGE_PNG_FILE: ${{ vars.TEST_DATA_IMAGE_PNG_FILE }}
+          HTTP_CLIENT.URL: ${{ vars.HTTP_CLIENT_URL }}
+          HTTP_CLIENT.TIMEOUT: ${{ vars.HTTP_CLIENT_TIMEOUT }}
         run: |
           pytest -m regression --alluredir=allure-results --numprocesses=2
+
+      - name: Restore Coverage history
+        uses: actions/cache/restore@v4
+        with:
+          path: swagger-coverage/coverage-history.json
+          key: coverage-history-${{ github.run_id }}
+          restore-keys: |
+            coverage-history-
+
+      - name: Generate Coverage report
+        if: always()
+        run: |
+          mkdir -p swagger-coverage
+          swagger-coverage-tool save-report
+
+      - name: Cache Coverage history
+        if: always()
+        uses: actions/cache/save@v4
+        with:
+          path: swagger-coverage/coverage-history.json
+          key: coverage-history-${{ github.run_id }}
+
+      - name: Upload Coverage report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: coverage-report
+          path: swagger-coverage/index.html
 
       - name: Upload Allure results
         if: always()
@@ -75,14 +115,31 @@ jobs:
           name: allure-results
           path: allure-results
 
-      - name: Generates Allure Report with history
+      - name: Download Coverage report
+        if: always()
+        uses: actions/download-artifact@v4
+        with:
+          name: coverage-report
+          path: coverage-report
+
+      - name: Generate Allure Report with history
         uses: simple-elf/allure-report-action@v1.13
         if: always()
         with:
           allure_results: allure-results
           allure_history: allure-history
 
-      - name: Deploy report to Github Pages
+      - name: Add Coverage report to deploy directory
+        if: always()
+        run: |
+          mkdir -p allure-history/coverage
+          if [ -f coverage-report/index.html ]; then
+            cp coverage-report/index.html allure-history/coverage/index.html
+          elif [ -f gh-pages/coverage/index.html ]; then
+            cp gh-pages/coverage/index.html allure-history/coverage/index.html
+          fi
+
+      - name: Deploy reports to Github Pages
         if: always()
         uses: peaceiris/actions-gh-pages@v4
         with:
