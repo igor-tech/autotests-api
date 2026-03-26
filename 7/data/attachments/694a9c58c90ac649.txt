@@ -1,0 +1,19 @@
+INFO     HTTP_LOGGER:event_hooks.py:27 Make POST request to http://localhost:8000/api/v1/users
+INFO     HTTP_LOGGER:event_hooks.py:36 Got 200 OK from http://localhost:8000/api/v1/users
+INFO     HTTP_LOGGER:event_hooks.py:27 Make POST request to http://localhost:8000/api/v1/authentication/login
+INFO     HTTP_LOGGER:event_hooks.py:36 Got 200 OK from http://localhost:8000/api/v1/authentication/login
+INFO     HTTP_LOGGER:event_hooks.py:27 Make POST request to http://localhost:8000/api/v1/files
+INFO     HTTP_LOGGER:event_hooks.py:36 Got 200 OK from http://localhost:8000/api/v1/files
+INFO     HTTP_LOGGER:event_hooks.py:27 Make POST request to http://localhost:8000/api/v1/courses
+INFO     HTTP_LOGGER:event_hooks.py:36 Got 200 OK from http://localhost:8000/api/v1/courses
+INFO     BASE_ASSERTIONS:base.py:20 Check that response status code equals to '200'
+INFO     COURSES_ASSERTIONS:courses.py:84 Check create course response
+INFO     BASE_ASSERTIONS:base.py:36 Check that "title" equals to It spring beautiful reduce week smile.
+INFO     BASE_ASSERTIONS:base.py:36 Check that "max_score" equals to 94
+INFO     BASE_ASSERTIONS:base.py:36 Check that "min_score" equals to 20
+INFO     BASE_ASSERTIONS:base.py:36 Check that "description" equals to Attack final draw past administration day certainly. Continue commercial imagine war factor road. Window watch land.
+Drive analysis fast too turn land. Nor car or hand society generation.
+INFO     BASE_ASSERTIONS:base.py:36 Check that "estimated_time" equals to 9 weeks
+INFO     BASE_ASSERTIONS:base.py:36 Check that "preview_file_id" equals to b5f4601a-cbc0-4d4a-b214-95d93bf9fe12
+INFO     BASE_ASSERTIONS:base.py:36 Check that "created_by_user_id" equals to f803040c-76aa-470c-a025-af84092d1e5b
+INFO     SCHEMA_ASSERTIONS:schema.py:21 Validate JSON schema

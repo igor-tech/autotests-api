@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTAzLTI2VDE5OjE2OjUzLjIzNDY2MCIsInVzZXJfaWQiOiI4ODY5OGExNC0zYWNiLTQ5ZmEtYTdhMS0wOGEzZTZmMDdjMDQifQ.z6XdoHsRetv3Mo_AUIzaJOP1xCtGzTJXrMeV7tkJTaY' \
+  -H 'content-length: 408' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Author can from interview camera white staff structure.","maxScore":90,"minScore":27,"description":"Set reflect event sense. Hundred difficult despite walk. Compare choice down debate.\nNotice name quite start. Whose star wide. Small common hit evidence red.","estimatedTime":"8 weeks","previewFileId":"2008e3c3-ffb7-4689-ad74-af3177b1f326","createdByUserId":"88698a14-3acb-49fa-a7a1-08a3e6f07c04"}'

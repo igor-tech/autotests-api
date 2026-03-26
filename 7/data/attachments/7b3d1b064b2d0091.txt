@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/exercises' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTAzLTI2VDE5OjE2OjUyLjY0MDA2NiIsInVzZXJfaWQiOiIyNjk0ZjI2ZC03MGM0LTQ4N2QtODM1Zi1iMTUyNWNhYmIwNzgifQ.sPwfCKG0PtuWiqq39wNnihuPNe5rUxR4AFD3Ja021Gw' \
+  -H 'content-length: 281' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Wife news yourself become production.","courseId":"a1783e8b-3042-465b-af43-1379e68af418","maxScore":91,"minScore":13,"orderIndex":100,"description":"Else believe identify listen happen adult agent value. Mother break they else sure base floor.","estimatedTime":"7 weeks"}'

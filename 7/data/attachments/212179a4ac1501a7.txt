@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTAzLTI2VDE5OjE2OjU1LjA3MzI1MCIsInVzZXJfaWQiOiJmNzQ3ZmU1Yy00YTYyLTQxMjMtODZiMC1jNjVhNGQ2ODY5OWQifQ.4tFdL7k_OsnJMDSx2HSFwyGzPes8adBBy8J94uKWNHk' \
+  -H 'content-length: 384' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Subject southern inside.","maxScore":69,"minScore":13,"description":"Article offer military we garden air. Rate skin threat accept teach stop. This others mission one physical change power.\nReturn capital win mean degree carry apply.","estimatedTime":"9 weeks","previewFileId":"52440e92-9c9a-486f-8a23-54e229925b48","createdByUserId":"f747fe5c-4a62-4123-86b0-c65a4d68699d"}'

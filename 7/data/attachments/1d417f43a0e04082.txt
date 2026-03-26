@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTAzLTI2VDE5OjE2OjUxLjk5MzI5OSIsInVzZXJfaWQiOiJmODAzMDQwYy03NmFhLTQ3MGMtYTAyNS1hZjg0MDkyZDFlNWIifQ.KiG0sZWVFalBwtIYOlNZhzvNptFu2-8QRinGPLUXfHg' \
+  -H 'content-length: 421' \
+  -H 'content-type: application/json' \
+  -d '{"title":"It spring beautiful reduce week smile.","maxScore":94,"minScore":20,"description":"Attack final draw past administration day certainly. Continue commercial imagine war factor road. Window watch land.\nDrive analysis fast too turn land. Nor car or hand society generation.","estimatedTime":"9 weeks","previewFileId":"b5f4601a-cbc0-4d4a-b214-95d93bf9fe12","createdByUserId":"f803040c-76aa-470c-a025-af84092d1e5b"}'

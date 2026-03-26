@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTAzLTI2VDE5OjE2OjUzLjgyODk0MCIsInVzZXJfaWQiOiJjNDY0MTNmMS03NzQ1LTQwZTEtOTc3OS1hMGJkMzQwM2YyMTcifQ.N8dbt-a0OhgWoo7QKuscdGPXjlfcCpOrflq6O7IxO5o' \
+  -H 'content-length: 414' \
+  -H 'content-type: application/json' \
+  -d '{"title":"That arrive actually specific grow community.","maxScore":61,"minScore":20,"description":"Sit listen peace week receive both choose parent. End accept strategy yes direction easy hour.\nGovernment present though produce. Save mean return when capital lay anything.","estimatedTime":"1 weeks","previewFileId":"9349e625-4267-4bf9-83fb-472cf8bf09b4","createdByUserId":"c46413f1-7745-40e1-9779-a0bd3403f217"}'

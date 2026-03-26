@@ -1,0 +1,25 @@
+INFO     HTTP_LOGGER:event_hooks.py:27 Make POST request to http://localhost:8000/api/v1/users
+INFO     HTTP_LOGGER:event_hooks.py:36 Got 200 OK from http://localhost:8000/api/v1/users
+INFO     HTTP_LOGGER:event_hooks.py:27 Make POST request to http://localhost:8000/api/v1/authentication/login
+INFO     HTTP_LOGGER:event_hooks.py:36 Got 200 OK from http://localhost:8000/api/v1/authentication/login
+INFO     HTTP_LOGGER:event_hooks.py:27 Make POST request to http://localhost:8000/api/v1/files
+INFO     HTTP_LOGGER:event_hooks.py:36 Got 200 OK from http://localhost:8000/api/v1/files
+INFO     HTTP_LOGGER:event_hooks.py:27 Make POST request to http://localhost:8000/api/v1/courses
+INFO     HTTP_LOGGER:event_hooks.py:36 Got 200 OK from http://localhost:8000/api/v1/courses
+INFO     HTTP_LOGGER:event_hooks.py:27 Make POST request to http://localhost:8000/api/v1/exercises
+INFO     HTTP_LOGGER:event_hooks.py:36 Got 200 OK from http://localhost:8000/api/v1/exercises
+INFO     HTTP_LOGGER:event_hooks.py:27 Make GET request to http://localhost:8000/api/v1/exercises?courseId=fb58e097-c89d-4111-b712-a6d3ff91b920
+INFO     HTTP_LOGGER:event_hooks.py:36 Got 200 OK from http://localhost:8000/api/v1/exercises?courseId=fb58e097-c89d-4111-b712-a6d3ff91b920
+INFO     BASE_ASSERTIONS:base.py:20 Check that response status code equals to '200'
+INFO     EXERCISES_ASSERTIONS:exercises.py:117 Check get exercises response
+INFO     BASE_ASSERTIONS:base.py:63 Check that length of "exercises" equals to 1
+INFO     EXERCISES_ASSERTIONS:exercises.py:66 Check exercise
+INFO     BASE_ASSERTIONS:base.py:36 Check that "id" equals to e562cccb-d4f6-43bf-ad05-281bbcff3a54
+INFO     BASE_ASSERTIONS:base.py:36 Check that "estimated_time" equals to 6 weeks
+INFO     BASE_ASSERTIONS:base.py:36 Check that "title" equals to Turn gas professional physical before drop.
+INFO     BASE_ASSERTIONS:base.py:36 Check that "course_id" equals to fb58e097-c89d-4111-b712-a6d3ff91b920
+INFO     BASE_ASSERTIONS:base.py:36 Check that "max_score" equals to 81
+INFO     BASE_ASSERTIONS:base.py:36 Check that "min_score" equals to 2
+INFO     BASE_ASSERTIONS:base.py:36 Check that "order_index" equals to 59
+INFO     BASE_ASSERTIONS:base.py:36 Check that "description" equals to Road everybody table method cultural receive role. Space feeling plan none. Early challenge long raise source.
+INFO     SCHEMA_ASSERTIONS:schema.py:21 Validate JSON schema

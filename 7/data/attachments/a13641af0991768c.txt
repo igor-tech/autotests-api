@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTAzLTI2VDE5OjE2OjUyLjY0MDA2NiIsInVzZXJfaWQiOiIyNjk0ZjI2ZC03MGM0LTQ4N2QtODM1Zi1iMTUyNWNhYmIwNzgifQ.sPwfCKG0PtuWiqq39wNnihuPNe5rUxR4AFD3Ja021Gw' \
+  -H 'content-length: 408' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Fall course onto others put.","maxScore":84,"minScore":28,"description":"Could back daughter interest. Data today color top fill six least.\nEvidence catch cut sit choose administration. Bring end another page population staff face. Finish ball medical town.","estimatedTime":"5 weeks","previewFileId":"cfb548c6-0c38-4396-985c-0a32eb284c7b","createdByUserId":"2694f26d-70c4-487d-835f-b1525cabb078"}'
