@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/exercises' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTAzLTI2VDE5OjExOjM4LjMwOTAxOCIsInVzZXJfaWQiOiI0NjhjMjA4Ny0yOWEyLTQyMzAtYTI0Zi0xYzJmNTdkOTZkODcifQ.0dhWZL-V6eQfTqUtjf8odsjihQddXGSqCTJcNsUq6eI' \
+  -H 'content-length: 343' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Hot head message type.","courseId":"db5f6e2f-ec3d-4cc9-a308-b8efbe106aa3","maxScore":69,"minScore":14,"orderIndex":36,"description":"Notice affect environment own remain eight whom growth. Out series good. Require rise worker capital fill name travel.\nNight clearly street for. Foreign unit kitchen ever.","estimatedTime":"2 weeks"}'

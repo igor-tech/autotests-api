@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTAzLTI2VDE5OjExOjM3LjcxODgyNSIsInVzZXJfaWQiOiI2NjU4Mzg5NS04OGFmLTQ0N2YtYWFmNC03NTBiZjg2NmJjZDgifQ.LfRWG4_KA_2XI70r3gDMopfCQ2-zVHqPOB-Jn0PZKAE' \
+  -H 'content-length: 388' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Site determine build sort common as.","maxScore":68,"minScore":1,"description":"Realize choose forget no involve. Show wind three six all energy learn.\nReveal significant economic other drug treatment. Laugh third support president rich.","estimatedTime":"4 weeks","previewFileId":"3dadaa75-2b8d-4b54-a57a-58a5c884e52e","createdByUserId":"66583895-88af-447f-aaf4-750bf866bcd8"}'

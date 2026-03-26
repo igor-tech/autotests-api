@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTAzLTI2VDE5OjExOjM4Ljk2NjY5OSIsInVzZXJfaWQiOiI4NDgwNzAzMi1iNmI4LTQ1ZmQtODA5ZC0xNjcyMDA4NTEwNjEifQ.0FZf08nZWgm3kw-VKbI_q4FVB403t3pTgIfiRe-x_8k' \
+  -H 'content-length: 434' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Little bring star special late affect.","maxScore":68,"minScore":15,"description":"Rise forward people provide he rise image. Become do such turn.\nVoice hotel year reality myself. End mouth remain community student be rule modern.\nCertain kind religious account. Hope herself class.","estimatedTime":"5 weeks","previewFileId":"e70f3f57-b6e1-4508-ab5f-a7cd03dfcd74","createdByUserId":"84807032-b6b8-45fd-809d-167200851061"}'

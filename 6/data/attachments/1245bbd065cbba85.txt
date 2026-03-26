@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTAzLTI2VDE5OjExOjM2LjQ3NjU4MiIsInVzZXJfaWQiOiJhNmU0OTUyNi1iZGJlLTQ0Y2EtOWZhNS0zMTU0ZDAzNDBhZWYifQ.9Nv_2wdUMTLaMCat5PMzvg4mPymVZ7VRHCd7EWsbazk' \
+  -H 'content-length: 399' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Left at free people.","maxScore":76,"minScore":20,"description":"Thus way each executive form. So recent box hard represent force. Else force push past rate easy.\nTree view product picture play someone scientist positive. Drop plant single against.","estimatedTime":"3 weeks","previewFileId":"535d2e18-7871-42e7-a0b9-a377dbaedbd3","createdByUserId":"a6e49526-bdbe-44ca-9fa5-3154d0340aef"}'

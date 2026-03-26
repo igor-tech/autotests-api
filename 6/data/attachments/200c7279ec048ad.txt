@@ -1,0 +1,11 @@
+curl -X 'PATCH' \
+  'http://localhost:8000/api/v1/courses/840e45ab-253c-4dda-a09f-18377e954b77' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTAzLTI2VDE5OjExOjM2LjQ3NjU4MiIsInVzZXJfaWQiOiJhNmU0OTUyNi1iZGJlLTQ0Y2EtOWZhNS0zMTU0ZDAzNDBhZWYifQ.9Nv_2wdUMTLaMCat5PMzvg4mPymVZ7VRHCd7EWsbazk' \
+  -H 'content-length: 223' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Upon station fact lot man they least industry.","maxScore":93,"minScore":15,"description":"Certain last in everybody common girl unit. Conference someone PM surface benefit hotel these.","estimatedTime":"3 weeks"}'

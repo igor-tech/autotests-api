@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/exercises' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTAzLTI2VDE5OjExOjM3LjcxODgyNSIsInVzZXJfaWQiOiI2NjU4Mzg5NS04OGFmLTQ0N2YtYWFmNC03NTBiZjg2NmJjZDgifQ.LfRWG4_KA_2XI70r3gDMopfCQ2-zVHqPOB-Jn0PZKAE' \
+  -H 'content-length: 340' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Kitchen maintain say clearly.","courseId":"79044bb0-71ce-4663-87fd-7038a6905a4c","maxScore":51,"minScore":29,"orderIndex":64,"description":"Chance through fact finally church suddenly. Production tonight the positive special other.\nCan put above any factor next perhaps life. Blue six structure drive.","estimatedTime":"5 weeks"}'

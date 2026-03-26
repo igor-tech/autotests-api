@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/exercises' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTAzLTI2VDE5OjExOjQwLjIxNzYwMyIsInVzZXJfaWQiOiI2ZDZiMzEwNC03MGIzLTQxMzktYjZkMC0xNGMzYTg2YWQzMDkifQ.w0I6KJskZV6d0WIjgdsAshsbv9BqA4V-7zrJH0MncgU' \
+  -H 'content-length: 277' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Once where person example.","courseId":"7dd42d51-4def-44c5-b23b-76b8dd4f21bb","maxScore":96,"minScore":5,"orderIndex":24,"description":"West later unit sport mind example. Last letter size mean admit present. Teach order series offer type.","estimatedTime":"3 weeks"}'

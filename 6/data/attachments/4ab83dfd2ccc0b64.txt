@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTAzLTI2VDE5OjExOjM4LjMwOTAxOCIsInVzZXJfaWQiOiI0NjhjMjA4Ny0yOWEyLTQyMzAtYTI0Zi0xYzJmNTdkOTZkODcifQ.0dhWZL-V6eQfTqUtjf8odsjihQddXGSqCTJcNsUq6eI' \
+  -H 'content-length: 397' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Relate employee west less discussion.","maxScore":94,"minScore":20,"description":"Good positive when reduce suffer clearly talk. Black sense save common avoid education newspaper.\nCreate trade course anything. Minute heavy itself social fire our.","estimatedTime":"3 weeks","previewFileId":"e1dd6347-4c7e-43d8-80cd-4a5f0d45cda1","createdByUserId":"468c2087-29a2-4230-a24f-1c2f57d96d87"}'

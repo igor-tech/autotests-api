@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTAzLTI2VDE5OjExOjM5LjU1MTg2NCIsInVzZXJfaWQiOiIwN2E1NzBkNC1iMGU5LTQzMzAtYTdiZi1kZjAxZTY0NGE2MDUifQ.NQ7CHruzvkrDfupXnnBT_IcyXTnmSSHPBMn8aaaBdFE' \
+  -H 'content-length: 408' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Central song than region house affect word happy.","maxScore":92,"minScore":20,"description":"Party let care cause five. Blood seat agree interview tough. How lot environmental.\nPaper student step can continue will. Some reveal think little local interview.","estimatedTime":"8 weeks","previewFileId":"bccab83f-196a-484e-a7a8-41dce78a5579","createdByUserId":"07a570d4-b0e9-4330-a7bf-df01e644a605"}'
