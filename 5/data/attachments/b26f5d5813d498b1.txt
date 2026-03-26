@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/exercises' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTAzLTI2VDE4OjI3OjQzLjM0MDkyMSIsInVzZXJfaWQiOiI0MTJiMWFiZi1hMjZiLTQ2ZGYtOTYwMC1iMDExZmRkNWQxYjUifQ.R7WFJsdze-GMdNsFmnUEmonKU9T-YJExGaogGOI_tU0' \
+  -H 'content-length: 345' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Behavior former energy officer discuss loss.","courseId":"2de84ebe-76a4-4687-9d7c-eb4ce97dfd2d","maxScore":64,"minScore":5,"orderIndex":59,"description":"Walk operation minute these name travel new. Them pretty everybody individual today list finally. Attention far off word hospital. Walk raise wife peace.","estimatedTime":"1 weeks"}'

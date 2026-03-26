@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/exercises' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTAzLTI2VDE4OjI3OjQ2LjA3NTM3NiIsInVzZXJfaWQiOiI0NjkzNmRkOS00NzUzLTQxZWQtODA4Yi03NjIyMDI4MzJjN2UifQ.Y6AtHCBAd1-NrnPzaus-8J53bN1w32zvJ3ghTbIGIpE' \
+  -H 'content-length: 386' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Responsibility fear catch understand difference.","courseId":"f717d572-c419-44bb-bc90-6fc84dce1c12","maxScore":79,"minScore":17,"orderIndex":68,"description":"Enjoy exist class. West small chance professional create piece parent. Fine fine star.\nPresent quality fish include lose. Even remember success power wish fine. Mean offer argue win light.","estimatedTime":"4 weeks"}'

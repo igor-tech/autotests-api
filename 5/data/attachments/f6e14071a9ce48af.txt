@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTAzLTI2VDE4OjI3OjQzLjM0MDkyMSIsInVzZXJfaWQiOiI0MTJiMWFiZi1hMjZiLTQ2ZGYtOTYwMC1iMDExZmRkNWQxYjUifQ.R7WFJsdze-GMdNsFmnUEmonKU9T-YJExGaogGOI_tU0' \
+  -H 'content-length: 388' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Between guess all prepare political material.","maxScore":68,"minScore":1,"description":"These industry real force image. Upon newspaper a. Accept water fact owner card pay though make.\nSound reflect positive fear personal walk American.","estimatedTime":"9 weeks","previewFileId":"5c20af8c-b84b-49a2-bba5-ecae200405d8","createdByUserId":"412b1abf-a26b-46df-9600-b011fdd5d1b5"}'

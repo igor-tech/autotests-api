@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTAzLTI2VDE4OjI3OjQzLjk5NTQ4OSIsInVzZXJfaWQiOiJlNTAwNDczYi0zMTgwLTQzZDAtYjZhYi1jMzU0NjM3NzA2ZDkifQ.4y4GOJXbVQkTljAlnk15n17iUN3hTsWhvzPZoaDjfuQ' \
+  -H 'content-length: 417' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Name east environmental.","maxScore":72,"minScore":24,"description":"Here skin treatment project pretty radio herself.\nPerhaps near whose hotel forward science stage. Clear likely leave decade name accept these.\nSomeone life less country age. Walk become laugh our.","estimatedTime":"7 weeks","previewFileId":"f79edf16-30fd-48b7-a89d-7815d804e8c4","createdByUserId":"e500473b-3180-43d0-b6ab-c354637706d9"}'

@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTAzLTI2VDE4OjI3OjQyLjY4OTE3MiIsInVzZXJfaWQiOiIwZjg0Mzk0ZC04ZmRmLTQ3OTYtODE5MS1kM2M4YWVjYjVkMWQifQ.rOp_Q34Cf39gNYdwC-ynnpijj9XO5ovMsnNJ5jom0Jo' \
+  -H 'content-length: 344' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Since part support owner those hard.","maxScore":99,"minScore":26,"description":"But police build final class meeting. Represent home remember perhaps. Bank once media improve performance great.","estimatedTime":"3 weeks","previewFileId":"8ff3994a-7b88-4471-8d61-e48451373a04","createdByUserId":"0f84394d-8fdf-4796-8191-d3c8aecb5d1d"}'

@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTAzLTI2VDE4OjI3OjQ1LjM2Mjg1MSIsInVzZXJfaWQiOiIwODk3YWFmMS0wMjVhLTRiYzMtODA4Ni01NGJkMGE4MWYwMDIifQ.W8zf6DntTfK-Hnf5ZLMR8LnINwW7BIyu1tNikSg52rs' \
+  -H 'content-length: 426' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Either few ago nothing each sea thus.","maxScore":67,"minScore":2,"description":"Nature southern although through.\nWhy heavy east wall. Several event outside among officer town foreign.\nOwn might fast begin claim participant. Feel media another cut cause your break explain.","estimatedTime":"5 weeks","previewFileId":"a3acc323-b16b-4dea-8038-9d47336d0287","createdByUserId":"0897aaf1-025a-4bc3-8086-54bd0a81f002"}'

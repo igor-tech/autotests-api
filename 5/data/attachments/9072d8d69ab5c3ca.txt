@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTAzLTI2VDE4OjI3OjQ2LjA3NTM3NiIsInVzZXJfaWQiOiI0NjkzNmRkOS00NzUzLTQxZWQtODA4Yi03NjIyMDI4MzJjN2UifQ.Y6AtHCBAd1-NrnPzaus-8J53bN1w32zvJ3ghTbIGIpE' \
+  -H 'content-length: 308' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Lawyer watch much prepare road.","maxScore":69,"minScore":17,"description":"Woman listen we fact resource begin serious. Collection likely modern tend impact.","estimatedTime":"3 weeks","previewFileId":"e0d9d74c-ddca-48f5-ada2-161bca75c43e","createdByUserId":"46936dd9-4753-41ed-808b-762202832c7e"}'

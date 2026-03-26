@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTAzLTI2VDE4OjI3OjQ0LjcwMzgzMSIsInVzZXJfaWQiOiJkZDRhYmY5Zi03YTkxLTRhYzYtYjY1Mi0wMWQyZjBiMDEzZDkifQ.Us7Bt0sGjt60KLhp6cIt7CGZ2vHu-1APAlaeSgM8Ego' \
+  -H 'content-length: 395' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Night tax room almost consider.","maxScore":97,"minScore":7,"description":"Keep discuss these order through part theory. Organization yeah film fall president.\nIf south sometimes feel. Word matter at fly more contain. Piece difference few half.","estimatedTime":"1 weeks","previewFileId":"deb17246-3c02-4084-9872-f2c7d4adf048","createdByUserId":"dd4abf9f-7a91-4ac6-b652-01d2f0b013d9"}'

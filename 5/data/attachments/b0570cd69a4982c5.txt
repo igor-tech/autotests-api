@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTAzLTI2VDE4OjI3OjQxLjI5MjM0NCIsInVzZXJfaWQiOiJhZGExZGQyMi00YjA5LTRiMjktOTE1ZS1mYjNjNzEwNzk1NTEifQ.rd03WGD0DZGftCqENuR5K_05u2Jmq8jBCUIZxZJXPOM' \
+  -H 'content-length: 331' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Tend economy early exactly.","maxScore":71,"minScore":28,"description":"Ability or stay during market. Mention radio course new hair because include appear. Threat dinner arm child.","estimatedTime":"8 weeks","previewFileId":"9db08cf8-c90c-4621-acaa-ebeafd8fcce4","createdByUserId":"ada1dd22-4b09-4b29-915e-fb3c71079551"}'
