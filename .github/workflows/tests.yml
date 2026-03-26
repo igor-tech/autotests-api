@@ -160,8 +160,9 @@ jobs:
       - name: Prepare deploy directory
         if: always()
         run: |
+          sudo cp -r allure-history deploy
+          sudo chown -R $(whoami) deploy
           mkdir -p deploy/coverage
-          sudo cp -r allure-history/* deploy/
           if [ -f coverage-report/index.html ]; then
             cp coverage-report/index.html deploy/coverage/index.html
           elif [ -f gh-pages/coverage/index.html ]; then
