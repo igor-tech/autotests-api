@@ -1,12 +1,15 @@
+import allure
 from httpx import Response
 
 from clients.api_client import APIClient
 from clients.api_coverage import tracker
-from clients.courses.courses_schema import CreateCourseRequestSchema, CreateCourseResponseSchema, \
-    UpdateCourseRequestSchema, GetCoursesQuerySchema
-from clients.private_http_builder import get_private_http_client, AuthenticationUserSchema
-import allure
-
+from clients.courses.courses_schema import (
+    CreateCourseRequestSchema,
+    CreateCourseResponseSchema,
+    GetCoursesQuerySchema,
+    UpdateCourseRequestSchema,
+)
+from clients.private_http_builder import AuthenticationUserSchema, get_private_http_client
 from tools.routes import APIRoutes
 
 

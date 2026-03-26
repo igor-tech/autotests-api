@@ -14,7 +14,27 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
+  lint:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+
+      - name: Run Ruff linter
+        run: pip install ruff && ruff check .
+
+      - name: Check Ruff formatting
+        run: ruff format --check .
+
   run-tests:
+    needs: lint
     runs-on: ubuntu-latest
     timeout-minutes: 30
 

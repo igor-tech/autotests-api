@@ -1,11 +1,10 @@
+import allure
 from httpx import Response
 
 from clients.api_client import APIClient
 from clients.api_coverage import tracker
-from clients.private_http_builder import get_private_http_client, AuthenticationUserSchema
-from clients.users.users_schema import UpdateUserRequestSchema, GetUserResponseSchema
-import allure
-
+from clients.private_http_builder import AuthenticationUserSchema, get_private_http_client
+from clients.users.users_schema import GetUserResponseSchema, UpdateUserRequestSchema
 from tools.routes import APIRoutes
 
 

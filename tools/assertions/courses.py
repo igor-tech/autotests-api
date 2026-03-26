@@ -1,10 +1,16 @@
-from clients.courses.courses_schema import UpdateCourseRequestSchema, UpdateCourseResponseSchema, CourseSchema, \
-    GetCoursesResponseSchema, CreateCourseResponseSchema, CreateCourseRequestSchema
+import allure
+
+from clients.courses.courses_schema import (
+    CourseSchema,
+    CreateCourseRequestSchema,
+    CreateCourseResponseSchema,
+    GetCoursesResponseSchema,
+    UpdateCourseRequestSchema,
+    UpdateCourseResponseSchema,
+)
 from tools.assertions.base import assert_equal, assert_length
 from tools.assertions.files import assert_file
 from tools.assertions.users import assert_user
-import allure
-
 from tools.logger import get_logger
 
 logger = get_logger("COURSES_ASSERTIONS")
@@ -50,8 +56,7 @@ def assert_course(actual: CourseSchema, expected: CourseSchema):
 
 @allure.step("Check get courses response")
 def assert_get_courses_response(
-        get_courses_response: GetCoursesResponseSchema,
-        create_course_responses: list[CreateCourseResponseSchema]
+    get_courses_response: GetCoursesResponseSchema, create_course_responses: list[CreateCourseResponseSchema]
 ):
     """
     Проверяет, что ответ на получение списка курсов соответствует ответам на их создание.
@@ -68,10 +73,7 @@ def assert_get_courses_response(
 
 
 @allure.step("Check create course response")
-def assert_create_course_response(
-        request: CreateCourseRequestSchema,
-        response: CreateCourseResponseSchema
-):
+def assert_create_course_response(request: CreateCourseRequestSchema, response: CreateCourseResponseSchema):
     """
     Проверяет, что ответ на создание курса соответствует запросу.
 

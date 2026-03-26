@@ -1,5 +1,6 @@
 from enum import StrEnum
 
+
 class AllureTag(StrEnum):
     USERS = "USERS"
     FILES = "FILES"

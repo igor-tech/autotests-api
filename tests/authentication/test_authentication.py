@@ -1,7 +1,6 @@
-import allure
-
 from http import HTTPStatus
 
+import allure
 import pytest
 from allure_commons.types import Severity
 

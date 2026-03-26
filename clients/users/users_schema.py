@@ -1,6 +1,5 @@
-from typing import Optional
+from pydantic import BaseModel, ConfigDict, EmailStr, Field
 
-from pydantic import BaseModel, EmailStr, Field, ConfigDict
 from tools.fakers import fake
 
 
@@ -8,6 +7,7 @@ class UserSchema(BaseModel):
     """
     Описание структуры пользователя.
     """
+
     model_config = ConfigDict(populate_by_name=True)
 
     id: str
@@ -21,6 +21,7 @@ class GetUserResponseSchema(BaseModel):
     """
     Описание структуры ответа получения пользователя.
     """
+
     user: UserSchema
 
 
@@ -28,18 +29,20 @@ class UpdateUserRequestSchema(BaseModel):
     """
     Описание структуры запроса на обновление пользователя.
     """
+
     model_config = ConfigDict(populate_by_name=True)
 
-    email: Optional[EmailStr] = Field(default_factory=fake.email)
-    last_name: Optional[str] = Field(alias="lastName", default_factory=fake.last_name)
-    first_name: Optional[str] = Field(alias="firstName", default_factory=fake.first_name)
-    middle_name: Optional[str] = Field(alias="middleName", default_factory=fake.middle_name)
+    email: EmailStr | None = Field(default_factory=fake.email)
+    last_name: str | None = Field(alias="lastName", default_factory=fake.last_name)
+    first_name: str | None = Field(alias="firstName", default_factory=fake.first_name)
+    middle_name: str | None = Field(alias="middleName", default_factory=fake.middle_name)
 
 
 class CreateUserResponseSchema(BaseModel):
     """
     Описание структуры ответа создания пользователя.
     """
+
     user: UserSchema
 
 
@@ -47,6 +50,7 @@ class CreateUserRequestSchema(BaseModel):
     """
     Описание структуры запроса на создание пользователя.
     """
+
     model_config = ConfigDict(populate_by_name=True)
 
     email: EmailStr = Field(default_factory=fake.email)

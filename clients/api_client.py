@@ -1,7 +1,9 @@
-from httpx import Client, URL, Response, QueryParams
-from httpx._types import RequestData, RequestFiles
 from typing import Any
+
 import allure
+from httpx import URL, Client, QueryParams, Response
+from httpx._types import RequestData, RequestFiles
+
 
 class APIClient:
     def __init__(self, client: Client):
@@ -25,11 +27,11 @@ class APIClient:
 
     @allure.step("Make POST request to {url}")
     def post(
-            self,
-            url: URL | str,
-            json: Any | None = None,
-            data: RequestData | None = None,
-            files: RequestFiles | None = None
+        self,
+        url: URL | str,
+        json: Any | None = None,
+        data: RequestData | None = None,
+        files: RequestFiles | None = None,
     ) -> Response:
         """
         Выполняет POST-запрос.

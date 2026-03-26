@@ -1,11 +1,10 @@
+import allure
 from httpx import Response
 
 from clients.api_client import APIClient
 from clients.api_coverage import tracker
 from clients.authentication.authentication_schema import LoginRequestSchema, LoginResponseSchema, RefreshRequestSchema
 from clients.public_http_builder import get_public_http_client
-import allure
-
 from tools.routes import APIRoutes
 
 
@@ -26,7 +25,7 @@ class AuthenticationClient(APIClient):
         return self.post(
             f"{APIRoutes.AUTHENTICATION}/login",
             # Сериализуем модель в словарь с использованием alias
-            json=request.model_dump(by_alias=True)
+            json=request.model_dump(by_alias=True),
         )
 
     @allure.step("Refresh authentication token")
@@ -41,7 +40,7 @@ class AuthenticationClient(APIClient):
         return self.post(
             f"{APIRoutes.AUTHENTICATION}/refresh",
             # Сериализуем модель в словарь с использованием alias
-            json=request.model_dump(by_alias=True)
+            json=request.model_dump(by_alias=True),
         )
 
     def login(self, request: LoginRequestSchema) -> LoginResponseSchema:

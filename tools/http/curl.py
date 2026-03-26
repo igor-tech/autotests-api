@@ -1,5 +1,6 @@
 from httpx import Request, RequestNotRead
 
+
 def make_curl_from_request(request: Request) -> str:
     """
     Генерирует команду cURL из HTTP-запроса httpx.
@@ -13,10 +14,9 @@ def make_curl_from_request(request: Request) -> str:
         result.append(f"-H '{header}: {value}'")
 
     try:
-        if body:= request.content:
-            result.append(f"-d '{body.decode("UTF-8")}'")
+        if body := request.content:
+            result.append(f"-d '{body.decode('UTF-8')}'")
     except RequestNotRead:
         pass
-
 
     return " \\\n  ".join(result)

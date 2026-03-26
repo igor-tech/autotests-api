@@ -1,11 +1,13 @@
-from pydantic import BaseModel, Field, ConfigDict
 from typing import Any
+
+from pydantic import BaseModel, ConfigDict, Field
 
 
 class ValidationErrorSchema(BaseModel):
     """
     Модель, описывающая структуру ошибки валидации API.
     """
+
     model_config = ConfigDict(populate_by_name=True)
 
     type: str
@@ -19,9 +21,11 @@ class ValidationErrorResponseSchema(BaseModel):
     """
     Модель, описывающая структуру ответа API с ошибкой валидации.
     """
+
     model_config = ConfigDict(populate_by_name=True)
 
     details: list[ValidationErrorSchema] = Field(alias="detail")
+
 
 class InternalErrorResponseSchema(BaseModel):
     """

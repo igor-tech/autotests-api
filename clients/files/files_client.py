@@ -1,11 +1,10 @@
+import allure
 from httpx import Response
 
 from clients.api_client import APIClient
 from clients.api_coverage import tracker
 from clients.files.files_schema import CreateFileRequestSchema, CreateFileResponseSchema
 from clients.private_http_builder import AuthenticationUserSchema, get_private_http_client
-import allure
-
 from tools.routes import APIRoutes
 
 
@@ -48,7 +47,7 @@ class FilesClient(APIClient):
         return self.post(
             APIRoutes.FILES,
             data=request.model_dump(by_alias=True, exclude={"upload_file"}),
-            files={"upload_file": request.upload_file.read_bytes()}
+            files={"upload_file": request.upload_file.read_bytes()},
         )
 
     def create_file(self, request: CreateFileRequestSchema) -> CreateFileResponseSchema:

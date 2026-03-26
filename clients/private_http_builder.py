@@ -1,7 +1,9 @@
+from functools import cache
+
 from httpx import Client
-from pydantic import BaseModel, EmailStr, ConfigDict
-from functools import lru_cache
-from clients.authentication.authentication_client import get_authentication_client, LoginRequestSchema
+from pydantic import BaseModel, ConfigDict, EmailStr
+
+from clients.authentication.authentication_client import LoginRequestSchema, get_authentication_client
 from clients.event_hooks import curl_event_hook, log_request_event_hook, log_response_event_hook
 from config import settings
 
@@ -10,12 +12,14 @@ class AuthenticationUserSchema(BaseModel):
     """
     Описание структуры для аутентификации
     """
+
     model_config = ConfigDict(frozen=True)
 
     email: EmailStr
     password: str
 
-@lru_cache(maxsize=None)
+
+@cache
 def get_private_http_client(user: AuthenticationUserSchema) -> Client:
     """
     Функция создаёт экземпляр httpx_lesson.Client с аутентификацией пользователя.
@@ -35,5 +39,5 @@ def get_private_http_client(user: AuthenticationUserSchema) -> Client:
         timeout=settings.http_client.timeout,
         base_url=settings.http_client.client_url,
         headers={"Authorization": f"Bearer {login_response.token.access_token}"},
-        event_hooks={"request": [curl_event_hook, log_request_event_hook], "response": [log_response_event_hook]}
+        event_hooks={"request": [curl_event_hook, log_request_event_hook], "response": [log_response_event_hook]},
     )

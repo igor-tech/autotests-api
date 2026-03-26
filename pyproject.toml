@@ -1,0 +1,85 @@
+# Документация: https://docs.astral.sh/ruff/configuration/
+# Все правила: https://docs.astral.sh/ruff/rules/
+
+[tool.ruff]
+target-version = "py313"
+line-length = 120
+
+# Исключаем виртуальное окружение и сгенерированные файлы
+exclude = [
+    ".venv",
+    "__pycache__",
+    "allure-results",
+    "swagger-coverage",
+]
+
+# --- Линтер ---
+# https://docs.astral.sh/ruff/linter/
+[tool.ruff.lint]
+select = [
+    # Базовые правила качества кода
+    "F",     # pyflakes - обнаружение ошибок: неиспользуемые импорты, переменные, и т.д.
+             # https://docs.astral.sh/ruff/rules/#pyflakes-f
+    "E",     # pycodestyle errors - ошибки стиля PEP 8
+             # https://docs.astral.sh/ruff/rules/#pycodestyle-e-w
+    "W",     # pycodestyle warnings - предупреждения стиля PEP 8
+             # https://docs.astral.sh/ruff/rules/#pycodestyle-e-w
+
+    # Качество и безопасность кода
+    "B",     # flake8-bugbear - обнаружение реальных багов и плохих практик
+             # https://docs.astral.sh/ruff/rules/#flake8-bugbear-b
+    "C4",    # flake8-comprehensions - упрощение list/dict/set comprehensions
+             # https://docs.astral.sh/ruff/rules/#flake8-comprehensions-c4
+    "UP",    # pyupgrade - автоматическая модернизация синтаксиса под новые версии Python
+             # https://docs.astral.sh/ruff/rules/#pyupgrade-up
+
+    # Организация импортов
+    "I",     # isort - сортировка и группировка импортов
+             # https://docs.astral.sh/ruff/rules/#isort-i
+
+    # Правила специфичные для pytest
+    "PT",    # flake8-pytest-style - правильное использование pytest fixtures, markers, raises
+             # https://docs.astral.sh/ruff/rules/#flake8-pytest-style-pt
+
+    # Чистота импортов
+    "TID",   # flake8-tidy-imports - запрет на относительные импорты и lazy-загрузку
+             # https://docs.astral.sh/ruff/rules/#flake8-tidy-imports-tid
+
+    # Специфичные правила Ruff
+    "RUF",   # ruff-specific - дополнительные правила от Ruff, не покрытые другими линтерами
+             # https://docs.astral.sh/ruff/rules/#ruff-specific-rules-ruf
+]
+
+ignore = [
+    "E501",    # длина строки - контролируется форматтером, линтер не должен дублировать
+    "B008",    # вызовы функций в аргументах по умолчанию - нормально для pytest fixtures (Depends, Factory)
+    "RUF002",  # кириллица в docstrings - ложные срабатывания для русскоязычного проекта
+    "RUF003",  # кириллица в комментариях - аналогично
+]
+
+# Правила, которые игнорируются только для тестовых файлов
+# https://docs.astral.sh/ruff/settings/#lint_per-file-ignores
+[tool.ruff.lint.per-file-ignores]
+"tests/**/*.py" = [
+    "S101",   # assert в тестах - это стандартная практика pytest
+    "ARG",    # неиспользуемые аргументы - часто передаются через fixtures
+    "PT001",  # @pytest.fixture vs @pytest.fixture() - не принципиально
+    "PT023",  # @pytest.mark.xxx() vs @pytest.mark.xxx - не принципиально
+]
+"conftest.py" = [
+    "F401",   # неиспользуемые импорты - conftest.py регистрирует плагины через pytest_plugins
+]
+
+# Настройки сортировки импортов (isort)
+# https://docs.astral.sh/ruff/settings/#isort
+[tool.ruff.lint.isort]
+# Разделяем импорты на секции: stdlib -> third-party -> first-party
+known-third-party = ["allure", "allure_commons", "pytest", "httpx", "pydantic", "faker", "jsonschema"]
+
+# --- Форматтер ---
+# Замена Black - автоматическое форматирование кода
+# https://docs.astral.sh/ruff/formatter/
+[tool.ruff.format]
+quote-style = "double"              # двойные кавычки как стандарт
+indent-style = "space"              # пробелы вместо табов
+line-ending = "auto"                # автоопределение окончания строк (LF/CRLF)

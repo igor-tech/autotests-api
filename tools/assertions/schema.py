@@ -1,8 +1,8 @@
 from typing import Any
 
+import allure
 from jsonschema import validate
 from jsonschema.validators import Draft202012Validator
-import allure
 
 from tools.logger import get_logger
 

@@ -1,8 +1,7 @@
+import allure
 from httpx import Request, Response
 
 from tools.http.curl import make_curl_from_request
-import allure
-
 from tools.logger import get_logger
 
 logger = get_logger("HTTP_LOGGER")

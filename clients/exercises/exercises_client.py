@@ -3,10 +3,16 @@ from httpx import Response
 
 from clients.api_client import APIClient
 from clients.api_coverage import tracker
-from clients.exercises.exercises_schema import UpdateExerciseResponseSchema, UpdateExerciseRequestSchema, \
-    CreateExerciseResponseSchema, CreateExerciseRequestSchema, GetExerciseResponseSchema, GetExercisesQuerySchema, \
-    GetExercisesResponseSchema
-from clients.private_http_builder import get_private_http_client, AuthenticationUserSchema
+from clients.exercises.exercises_schema import (
+    CreateExerciseRequestSchema,
+    CreateExerciseResponseSchema,
+    GetExerciseResponseSchema,
+    GetExercisesQuerySchema,
+    GetExercisesResponseSchema,
+    UpdateExerciseRequestSchema,
+    UpdateExerciseResponseSchema,
+)
+from clients.private_http_builder import AuthenticationUserSchema, get_private_http_client
 from tools.routes import APIRoutes
 
 

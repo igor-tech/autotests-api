@@ -1,6 +1,7 @@
-from pydantic import BaseModel, HttpUrl, FilePath, DirectoryPath
-from pydantic_settings import BaseSettings, SettingsConfigDict
 from typing import Self
+
+from pydantic import BaseModel, DirectoryPath, FilePath, HttpUrl
+from pydantic_settings import BaseSettings, SettingsConfigDict
 
 
 class TestDataConfig(BaseModel):
@@ -18,7 +19,7 @@ class HTTPClientConfig(BaseModel):
 
 class Settings(BaseSettings):
     model_config = SettingsConfigDict(
-        extra='allow',
+        extra="allow",
         env_file=".env",
         env_file_encoding="utf-8",
         env_nested_delimiter=".",
