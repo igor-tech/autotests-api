@@ -7,22 +7,35 @@ on:
   pull_request:
     branches:
       - main
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
   run-tests:
     runs-on: ubuntu-latest
+    timeout-minutes: 30
 
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
 
+      - name: Check out test server repository
+        uses: actions/checkout@v4
+        with:
+          repository: Nikita-Filonov/qa-automation-engineer-api-course
+          path: qa-automation-engineer-api-course
+
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.13'
-
-      - name: Clone test server repository
-        run: git clone https://github.com/Nikita-Filonov/qa-automation-engineer-api-course.git
+          cache: 'pip'
+          cache-dependency-path: |
+            requirements.txt
+            qa-automation-engineer-api-course/requirements.txt
 
       - name: Install test server dependencies
         run: pip install -r qa-automation-engineer-api-course/requirements.txt
@@ -38,16 +51,7 @@ jobs:
         run: uvicorn main:app --host 0.0.0.0 --port 8000 --app-dir ./qa-automation-engineer-api-course &
 
       - name: Wait for test server to be ready
-        run: |
-          for i in $(seq 1 30); do
-            if curl -s http://localhost:8000/openapi.json > /dev/null; then
-              echo "Server is ready"
-              exit 0
-            fi
-            sleep 1
-          done
-          echo "Server failed to start"
-          exit 1
+        run: curl --retry 30 --retry-delay 1 --retry-connrefused http://localhost:8000/openapi.json
 
       - name: Install dependencies
         run: |
@@ -63,6 +67,7 @@ jobs:
           pytest -m regression --alluredir=allure-results --numprocesses=2
 
       - name: Restore Coverage history
+        if: always()
         uses: actions/cache/restore@v4
         with:
           path: swagger-coverage/coverage-history.json
@@ -101,6 +106,9 @@ jobs:
     needs: run-tests
     runs-on: ubuntu-latest
     if: always()
+    timeout-minutes: 10
+    permissions:
+      contents: write
 
     steps:
       - name: Check out repository
@@ -129,14 +137,15 @@ jobs:
           allure_results: allure-results
           allure_history: allure-history
 
-      - name: Add Coverage report to deploy directory
+      - name: Prepare deploy directory
         if: always()
         run: |
-          mkdir -p allure-history/coverage
+          mkdir -p deploy/coverage
+          sudo cp -r allure-history/* deploy/
           if [ -f coverage-report/index.html ]; then
-            cp coverage-report/index.html allure-history/coverage/index.html
+            cp coverage-report/index.html deploy/coverage/index.html
           elif [ -f gh-pages/coverage/index.html ]; then
-            cp gh-pages/coverage/index.html allure-history/coverage/index.html
+            cp gh-pages/coverage/index.html deploy/coverage/index.html
           fi
 
       - name: Deploy reports to Github Pages
@@ -145,4 +154,4 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: gh-pages
-          publish_dir: allure-history
+          publish_dir: deploy
